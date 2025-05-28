@@ -18,7 +18,7 @@ Where <> is your username.
 
 More details are available on the Elecrow website here:
 
-
+https://www.elecrow.com/wiki/CrowPanel_ESP32_7.0-inch_with_PlatformIO.html#get-started-with-platformio
 
 Compiling:
 
