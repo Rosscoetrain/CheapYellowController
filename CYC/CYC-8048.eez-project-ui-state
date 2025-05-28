@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/1",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/8",
     "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -72,6 +72,7 @@
           {
             "type": "border",
             "selected": 0,
+            "size": 129.5,
             "location": "bottom",
             "children": [
               {
@@ -209,10 +210,10 @@
                 {
                   "type": "tab",
                   "id": "#2c2fc19d-c36d-451c-b7fe-407c37eef5a2",
-                  "name": "Throttle",
+                  "name": "Credits",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/1",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/8",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -1314,15 +1315,14 @@
     "[CYC-8048.eez-project]:/userPages/9[flow-state]": {
       "selection": {
         "0": {
-          "3": {
-            "$selected": true
-          }
-        }
+          "3": {}
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -280
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1360,16 +1360,15 @@
         "0": {
           "3": {},
           "9": {},
-          "14": {
-            "$selected": true
-          },
+          "14": {},
           "16": {}
-        }
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -240
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1382,12 +1381,13 @@
     },
     "[CYC-8048.eez-project]:/userPages/6[flow-state]": {
       "selection": {
-        "0": {}
+        "0": {},
+        "$selected": true
       },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -520
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1403,12 +1403,13 @@
         "0": {
           "2": {},
           "8": {}
-        }
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -280
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1430,7 +1431,7 @@
       "transform": {
         "translate": {
           "x": -240,
-          "y": -100
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1455,7 +1456,7 @@
       "transform": {
         "translate": {
           "x": -240,
-          "y": -200
+          "y": -320
         },
         "scale": 0.8
       },
@@ -1470,16 +1471,15 @@
       "selection": {
         "0": {
           "2": {},
-          "8": {
-            "$selected": true
-          },
+          "8": {},
           "21": {}
-        }
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
-          "x": -139.22000000000003,
-          "y": -214.03777777777788
+          "x": -240,
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1496,10 +1496,9 @@
           "3": {},
           "8": {},
           "9": {},
-          "10": {
-            "$selected": true
-          }
-        }
+          "10": {}
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
@@ -1517,12 +1516,13 @@
     },
     "[CYC-8048.eez-project]:/userPages/2[flow-state]": {
       "selection": {
-        "0": {}
+        "0": {},
+        "$selected": true
       },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -760
+          "y": -400
         },
         "scale": 0.8
       },
@@ -1537,15 +1537,14 @@
       "selection": {
         "0": {
           "4": {},
-          "7": {
-            "$selected": true
-          }
-        }
+          "7": {}
+        },
+        "$selected": true
       },
       "transform": {
         "translate": {
-          "x": -121.49555969238276,
-          "y": -231.92572331261348
+          "x": -240,
+          "y": -400
         },
         "scale": 0.8
       },
