@@ -25,7 +25,8 @@ https://www.elecrow.com/wiki/CrowPanel_ESP32_7.0-inch_with_PlatformIO.html#get-s
 # Compiling:
 
 1. Clone this respository and the submodule(s)
-    git clone --recurse-submodules git@github.com:Rosscoetrain/CheapYellowController.git
+
+    `git clone --recurse-submodules git@github.com:Rosscoetrain/CheapYellowController.git`
 
 2. Open the folder in platformio
 
