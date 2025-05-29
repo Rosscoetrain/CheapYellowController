@@ -35,12 +35,16 @@
 
 // other includes for platformio RKS 27/05/2025
 #ifdef PLATFORMIO_BUILD
+#include "General_Page.h"
 #include "Menu_Page.h"
 #include "Program_Page.h"
 #include "Edit_Loco_Page.h"
 #include "Little_FS.h"
 #include "CSInterface.h"
 #include "Throttle_Page.h"
+#include "Roster_Page.h"
+#include "Scan_Page.h"
+#include "WiFi_Page.h"
 #endif
 
 WiFiClient client;
