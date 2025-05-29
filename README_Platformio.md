@@ -20,13 +20,20 @@ More details are available on the Elecrow website here:
 
 https://www.elecrow.com/wiki/CrowPanel_ESP32_7.0-inch_with_PlatformIO.html#get-started-with-platformio
 
-Compiling:
 
-1. Clone this respository
+
+# Compiling:
+
+1. Clone this respository and the submodule(s)
+
+    `git clone --recurse-submodules git@github.com:Rosscoetrain/CheapYellowController.git`
+
 2. Open the folder in platformio
-3. Upload
-4. Build Filesystem Image
-5. Upload Filesystem Image
+
+    For the board you are using
+3. Upload from the PROJECT TASKS
+4. Build Filesystem Image from the PROJECT TASKS
+5. Upload Filesystem Image from the PROJECT TASKS
 
 More details:
 
@@ -37,4 +44,5 @@ Display boards currently defined in platformio.ini
 
 Elecrow_DIS06043H       Elecrow 4.3" 480x272 model DIS06043H resistive touch
 Elecrow_DIS08070H       Elecrow 7.0" 800x480 model DIS08070H capacitive touch
+Sunton 4827S043C        Sunton 4.3" 480x272 capacitive touch
 
