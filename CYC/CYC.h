@@ -57,30 +57,85 @@ WiFiClient client;
  ************************************************************************************************************************
 */
 #if defined ESP2432S028R
+  #include "2432/ui.h"
+  #include "2432/screens.h"
+  #include "2432/actions.h"
+  #include "2432/images.h"
   #include "DisplayDrivers/ESP32_2432S028R.h"
 #elif defined ESP2432THMIR
+  #include "2432THMI/ui.h"
+  #include "2432THMI/screens.h"
+  #include "2432THMI/actions.h"
+  #include "2432THMI/images.h"
   #include "DisplayDrivers/ESP32_2432THMIR.h"
 #elif defined ESP2432S032R
+  #include "2432/ui.h"
+  #include "2432/screens.h"
+  #include "2432/actions.h"
+  #include "2432/images.h"
   #include "DisplayDrivers/ESP32_2432S032R.h"
 #elif defined ESP3248S035R
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
   #include "DisplayDrivers/ESP32_3248S035R.h"
 #elif defined ESP3248S035C
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
   #include "DisplayDrivers/ESP32_3248S035C.h"
 #elif defined ESP3248W535C
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
   #include "DisplayDrivers/ESP32_3248W535.h"
 #elif defined ESP4827S043R
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
   #include "DisplayDrivers/ESP32_4827S043R.h"
 #elif defined ESP4827S043C
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
   #include "DisplayDrivers/ESP32_4827S043C.h"
 #elif defined ESP4827W543R
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
   #include "DisplayDrivers/ESP32_4827W543R.h"
 #elif defined ESP4827W543C
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
   #include "DisplayDrivers/ESP32_4827W543C.h"
 #elif defined ESP8048S043C     
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
   #include "DisplayDrivers/ESP32_8048S043C.h"
 #elif defined ESP8048S050C
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
   #include "DisplayDrivers/ESP32_8048S050C.h"
 #elif defined ESP8048W550C
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
   #include "DisplayDrivers/ESP32_8048W550.h"
 //#elif defined ESP8048S070C     //TODO
 //  #include "DisplayDrivers/ESP32_8048S070C.h"
@@ -93,6 +148,10 @@ WiFiClient client;
   #include "4827/images.h"
   #include "DisplayDrivers/ESP32_DIS06043H.h"
 #elif defined ESP32DIS08070H
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
   #include "DisplayDrivers/ESP32_DIS08070H.h"
 #endif
 
