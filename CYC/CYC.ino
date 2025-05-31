@@ -81,7 +81,7 @@
 //#define ESP4827W543R           //Guition JC4827W543R - in testing
 //#define ESP4848S040C           //Guition JC4848W440C - in development
 //#define ESP8048S043C           // Sunton ESP32-8048S043C              ESP32-S3  tick  
-#define ESP8048S050C           // Sunton ESP32-8048S050C              ESP32-S3  tick
+//#define ESP8048S050C           // Sunton ESP32-8048S050C              ESP32-S3  tick
 //#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
 
 /******************************************************************************************************************************/
@@ -154,12 +154,14 @@ void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* 
 */
 void setBacklight(uint8_t brightness)
 {
+#ifndef PLATFORMIO_BUILD
   ledcSetup(0, 5000, 8);                          //If using ESP Boards 2.0.x LEDChannel, frequency, resolution
   ledcAttachPin(GFX_BL, 0);                       //If using ESP Boards 2.0.x Pin, LEDChannel
   ledcWrite(0, brightness);                       //If using ESP Boards 2.0.x LEDChannel, Brightness* 0-255
-
-//  ledcAttachChannel(GFX_BL, 5000, 8, 0);          //If using ESP Boards 3.x Pin, Frequency, Resolution, Channel
-//  ledcWrite(GFX_BL, brightness);                  //If using ESP Boards 3.x Pin, Brightness
+#else
+  ledcAttachChannel(GFX_BL, 5000, 8, 0);          //If using ESP Boards 3.x Pin, Frequency, Resolution, Channel
+  ledcWrite(GFX_BL, brightness);                  //If using ESP Boards 3.x Pin, Brightness
+#endif
 }
 /*
  ********************************************************************************************************

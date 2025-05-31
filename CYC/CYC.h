@@ -45,6 +45,8 @@
 #include "Roster_Page.h"
 #include "Scan_Page.h"
 #include "WiFi_Page.h"
+#include "Acc_Page.h"
+#include "Edit_Acc_Page.h"
 #endif
 
 WiFiClient client;
@@ -76,7 +78,7 @@ WiFiClient client;
   #include "DisplayDrivers/ESP32_4827W543C.h"
 #elif defined ESP8048S043C     
   #include "DisplayDrivers/ESP32_8048S043C.h"
-#elif defined ESP8048S050C     
+#elif defined ESP8048S050C
   #include "DisplayDrivers/ESP32_8048S050C.h"
 #elif defined ESP8048W550C
   #include "DisplayDrivers/ESP32_8048W550.h"
