@@ -28,26 +28,26 @@
 #include <LittleFS.h>
 #include <CSV_Parser.h>
 
-#include "ui.h"
-#include "screens.h"
-#include "actions.h"
-#include "images.h"
+//#include "ui.h"
+//#include "screens.h"
+//#include "actions.h"
+//#include "images.h"
 
 // other includes for platformio RKS 27/05/2025
-#ifdef PLATFORMIO_BUILD
-#include "General_Page.h"
-#include "Menu_Page.h"
-#include "Program_Page.h"
-#include "Edit_Loco_Page.h"
-#include "Little_FS.h"
-#include "CSInterface.h"
-#include "Throttle_Page.h"
-#include "Roster_Page.h"
-#include "Scan_Page.h"
-#include "WiFi_Page.h"
-#include "Acc_Page.h"
-#include "Edit_Acc_Page.h"
-#endif
+//#ifdef PLATFORMIO_BUILD
+//#include "General_Page.h"
+//#include "Menu_Page.h"
+//#include "Program_Page.h"
+//#include "Edit_Loco_Page.h"
+//#include "Little_FS.h"
+//#include "CSInterface.h"
+//#include "Throttle_Page.h"
+//#include "Roster_Page.h"
+//#include "Scan_Page.h"
+//#include "WiFi_Page.h"
+//#include "Acc_Page.h"
+//#include "Edit_Acc_Page.h"
+//#endif
 
 WiFiClient client;
 
@@ -87,10 +87,32 @@ WiFiClient client;
 //#elif defined ESP4848S040C     //TODO
 //  #include "DisplayDrivers/ESP32_4848S040C.h"
 #elif defined ESP32DIS06043H
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
   #include "DisplayDrivers/ESP32_DIS06043H.h"
 #elif defined ESP32DIS08070H
   #include "DisplayDrivers/ESP32_DIS08070H.h"
 #endif
+
+// other includes for platformio RKS 27/05/2025
+#ifdef PLATFORMIO_BUILD
+#include "General_Page.h"
+#include "Menu_Page.h"
+#include "Program_Page.h"
+#include "Edit_Loco_Page.h"
+#include "Little_FS.h"
+#include "CSInterface.h"
+#include "Throttle_Page.h"
+#include "Roster_Page.h"
+#include "Scan_Page.h"
+#include "WiFi_Page.h"
+#include "Acc_Page.h"
+#include "Edit_Acc_Page.h"
+#endif
+
+
 
 void dd_locos_cb(lv_event_t * e);
 static void throttle_selection_handler_cb(lv_event_t * e);
