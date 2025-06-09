@@ -108,6 +108,30 @@ void parse(char *com)
       }
       break;
     }
+
+    case 'j':       // receive roster from CS eg:
+                    // <jR 3000 3001 3005 4005 3016 3022 3048 4048 17 3084 3060 3065 3089 3102 3349 3356 3683 7994 191>
+    {
+      String msg = com;
+      if ((msg == "jR") && (msg.length() == 2))
+      {
+        Serial.printf("No roster on CS");
+      }
+      else
+      {
+        Serial.printf("Roster received");
+        Serial.print(msg);
+
+        msg = msg.substring(msg.indexOf(' '));
+        Serial.print(msg);
+
+
+
+      }
+
+      break;
+    }
+
     default:
       break;
   }
