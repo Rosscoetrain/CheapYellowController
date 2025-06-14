@@ -181,11 +181,8 @@ void setup()
   if (!gfx->begin())
   {
     Serial.println("gfx->begin() failed!");
-    while (1);
-    {
-      /* code */
-    }
-    
+    while(1)
+    {}
   }
   gfx->fillScreen(RGB565_BLACK);
 

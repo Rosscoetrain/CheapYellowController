@@ -22,16 +22,143 @@
 #include <Arduino.h>
 #include <lvgl.h>
 #include <WiFi.h>
+//#ifndef ESP32DIS08070H
 #include <Arduino_GFX_Library.h>
+//#else
+//#include <Adafruit_GFX.h>
+//#endif
+
 #include <EEPROM.h>
 //#include <DCCEXProtocol.h>
 #include <LittleFS.h>
 #include <CSV_Parser.h>
 
-#include "ui.h"
-#include "screens.h"
-#include "actions.h"
-#include "images.h"
+//#include "ui.h"
+//#include "screens.h"
+//#include "actions.h"
+//#include "images.h"
+
+// other includes for platformio RKS 27/05/2025
+//#ifdef PLATFORMIO_BUILD
+//#include "General_Page.h"
+//#include "Menu_Page.h"
+//#include "Program_Page.h"
+//#include "Edit_Loco_Page.h"
+//#include "Little_FS.h"
+//#include "CSInterface.h"
+//#include "Throttle_Page.h"
+//#include "Roster_Page.h"
+//#include "Scan_Page.h"
+//#include "WiFi_Page.h"
+//#include "Acc_Page.h"
+//#include "Edit_Acc_Page.h"
+//#endif
+
+WiFiClient client;
+
+/*
+ ************************************************************************************************************************
+ * Display Panel Selection
+ ************************************************************************************************************************
+*/
+#if defined ESP2432S028R
+  #include "2432/ui.h"
+  #include "2432/screens.h"
+  #include "2432/actions.h"
+  #include "2432/images.h"
+  #include "DisplayDrivers/ESP32_2432S028R.h"
+#elif defined ESP2432THMIR
+  #include "2432THMI/ui.h"
+  #include "2432THMI/screens.h"
+  #include "2432THMI/actions.h"
+  #include "2432THMI/images.h"
+  #include "DisplayDrivers/ESP32_2432THMIR.h"
+#elif defined ESP2432S032R
+  #include "2432/ui.h"
+  #include "2432/screens.h"
+  #include "2432/actions.h"
+  #include "2432/images.h"
+  #include "DisplayDrivers/ESP32_2432S032R.h"
+#elif defined ESP3248S035R
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
+  #include "DisplayDrivers/ESP32_3248S035R.h"
+#elif defined ESP3248S035C
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
+  #include "DisplayDrivers/ESP32_3248S035C.h"
+#elif defined ESP3248W535C
+  #include "3248/ui.h"
+  #include "3248/screens.h"
+  #include "3248/actions.h"
+  #include "3248/images.h"
+  #include "DisplayDrivers/ESP32_3248W535.h"
+#elif defined ESP4827S043R
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
+  #include "DisplayDrivers/ESP32_4827S043R.h"
+#elif defined ESP4827S043C
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
+  #include "DisplayDrivers/ESP32_4827S043C.h"
+#elif defined ESP4827W543R
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
+  #include "DisplayDrivers/ESP32_4827W543R.h"
+#elif defined ESP4827W543C
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
+  #include "DisplayDrivers/ESP32_4827W543C.h"
+#elif defined ESP8048S043C     
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
+  #include "DisplayDrivers/ESP32_8048S043C.h"
+#elif defined ESP8048S050C
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
+  #include "DisplayDrivers/ESP32_8048S050C.h"
+#elif defined ESP8048W550C
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
+  #include "DisplayDrivers/ESP32_8048W550.h"
+//#elif defined ESP8048S070C     //TODO
+//  #include "DisplayDrivers/ESP32_8048S070C.h"
+//#elif defined ESP4848S040C     //TODO
+//  #include "DisplayDrivers/ESP32_4848S040C.h"
+#elif defined ESP32DIS06043H
+  #include "4827/ui.h"
+  #include "4827/screens.h"
+  #include "4827/actions.h"
+  #include "4827/images.h"
+  #include "DisplayDrivers/ESP32_DIS06043H.h"
+#elif defined ESP32DIS08070H
+  #include "8048/ui.h"
+  #include "8048/screens.h"
+  #include "8048/actions.h"
+  #include "8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS08070H.h"
+#endif
 
 // other includes for platformio RKS 27/05/2025
 #ifdef PLATFORMIO_BUILD
@@ -49,48 +176,7 @@
 #include "Edit_Acc_Page.h"
 #endif
 
-WiFiClient client;
 
-/*
- ************************************************************************************************************************
- * Display Panel Selection
- ************************************************************************************************************************
-*/
-#if defined ESP2432S028R
-  #include "DisplayDrivers/ESP32_2432S028R.h"
-#elif defined ESP2432THMIR
-  #include "DisplayDrivers/ESP32_2432THMIR.h"
-#elif defined ESP2432S032R
-  #include "DisplayDrivers/ESP32_2432S032R.h"
-#elif defined ESP3248S035R
-  #include "DisplayDrivers/ESP32_3248S035R.h"
-#elif defined ESP3248S035C
-  #include "DisplayDrivers/ESP32_3248S035C.h"
-#elif defined ESP3248W535C
-  #include "DisplayDrivers/ESP32_3248W535.h"
-#elif defined ESP4827S043R
-  #include "DisplayDrivers/ESP32_4827S043R.h"
-#elif defined ESP4827S043C
-  #include "DisplayDrivers/ESP32_4827S043C.h"
-#elif defined ESP4827W543R
-  #include "DisplayDrivers/ESP32_4827W543R.h"
-#elif defined ESP4827W543C
-  #include "DisplayDrivers/ESP32_4827W543C.h"
-#elif defined ESP8048S043C     
-  #include "DisplayDrivers/ESP32_8048S043C.h"
-#elif defined ESP8048S050C
-  #include "DisplayDrivers/ESP32_8048S050C.h"
-#elif defined ESP8048W550C
-  #include "DisplayDrivers/ESP32_8048W550.h"
-//#elif defined ESP8048S070C     //TODO
-//  #include "DisplayDrivers/ESP32_8048S070C.h"
-//#elif defined ESP4848S040C     //TODO
-//  #include "DisplayDrivers/ESP32_4848S040C.h"
-#elif defined ESP32DIS06043H
-  #include "DisplayDrivers/ESP32_DIS06043H.h"
-#elif defined ESP32DIS08070H
-  #include "DisplayDrivers/ESP32_DIS08070H.h"
-#endif
 
 void dd_locos_cb(lv_event_t * e);
 static void throttle_selection_handler_cb(lv_event_t * e);
