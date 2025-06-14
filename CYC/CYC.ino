@@ -65,6 +65,7 @@
 
 *******************************************************************************************************************************/
 
+#ifndef PLATFORMIO_BUILD
 //#define ESP2432S028R           // Sunton ESP32-2432S028R Classic CYD  ESP32     tick 
 //#define ESP2432THMIR           //LilyGo T-HMI                         ESP32-S3  tick
 //#define ESP2432S032R           // Sunton ESP32-2432S032R              ESP32
@@ -74,7 +75,7 @@
 //#define ESP3248W535C           //Guition JC3248W535C - in testing     ESP32-S3  tick
 //#define ESP4827S043C           // Sunton ESP32-4827S043C              ESP32-S3  tick
 //#define ESP4827S043R           // Sunton ESP32-4827S043R              ESP32-S3  tick
-//#define ESP32DIS06043H         // Elcrow ESP32-DIS06043H            ESP32-S3  tick   by RKS
+#define ESP32DIS06043H         // Elcrow ESP32-DIS06043H            ESP32-S3  tick   by RKS
 //#define ESP32DIS08070H         // Elcrow ESP32-DIS08070H            ESP32-S3         by RKS
 
 //#define ESP4827W543C           //Guition JC4827W543C - in testing
@@ -83,6 +84,7 @@
 //#define ESP8048S043C           // Sunton ESP32-8048S043C              ESP32-S3  tick  
 //#define ESP8048S050C           // Sunton ESP32-8048S050C              ESP32-S3  tick
 //#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
+#endif
 
 /******************************************************************************************************************************/
 
