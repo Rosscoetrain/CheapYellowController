@@ -193,6 +193,18 @@
               "children": [
                 {
                   "type": "tab",
+                  "id": "#4a8bfbe0-ff24-4dff-a677-52b4b80333b6",
+                  "name": "Settings",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[CYC-3248.eez-project]:/settings",
+                    "subObjectPath": "[CYC-3248.eez-project]:/settings",
+                    "permanent": false
+                  },
+                  "icon": "material:settings"
+                },
+                {
+                  "type": "tab",
                   "id": "#6723a9af-d361-498e-99d0-398633f958ea",
                   "name": "Info",
                   "component": "editor",

@@ -1,6 +1,6 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES2432
 
 #ifndef EEZ_LVGL_UI_SCREENS_H
 #define EEZ_LVGL_UI_SCREENS_H
@@ -12,6 +12,8 @@ extern "C" {
 #endif
 
 typedef struct _objects_t {
+    lv_obj_t *edit_acc;
+    lv_obj_t *accessories;
     lv_obj_t *main;
     lv_obj_t *throttle;
     lv_obj_t *roster;
@@ -22,8 +24,6 @@ typedef struct _objects_t {
     lv_obj_t *config;
     lv_obj_t *credits;
     lv_obj_t *info;
-    lv_obj_t *accessories;
-    lv_obj_t *edit_acc;
     lv_obj_t *btn_stop;
     lv_obj_t *btn_power;
     lv_obj_t *sw_dir;
@@ -31,13 +31,6 @@ typedef struct _objects_t {
     lv_obj_t *btn_select_loco;
     lv_obj_t *btn_edit_loco;
     lv_obj_t *obj0;
-    lv_obj_t *obj1;
-    lv_obj_t *obj2;
-    lv_obj_t *obj3;
-    lv_obj_t *obj4;
-    lv_obj_t *obj5;
-    lv_obj_t *obj6;
-    lv_obj_t *obj7;
     lv_obj_t *btn_s0;
     lv_obj_t *btn_s1;
     lv_obj_t *btn_s2;
@@ -50,53 +43,87 @@ typedef struct _objects_t {
     lv_obj_t *btn_s9;
     lv_obj_t *btn_read;
     lv_obj_t *btn_write;
+    lv_obj_t *info_button_7;
+    lv_obj_t *obj1;
+    lv_obj_t *credits_button_7;
+    lv_obj_t *obj2;
+    lv_obj_t *obj3;
+    lv_obj_t *acc0_6;
+    lv_obj_t *info_button_6;
+    lv_obj_t *obj4;
+    lv_obj_t *credits_button_6;
+    lv_obj_t *obj5;
+    lv_obj_t *obj6;
+    lv_obj_t *acc0;
+    lv_obj_t *acc1;
+    lv_obj_t *acc2;
+    lv_obj_t *acc3;
+    lv_obj_t *acc4;
+    lv_obj_t *credits_button_9;
+    lv_obj_t *obj7;
+    lv_obj_t *credits_button_11;
+    lv_obj_t *obj8;
+    lv_obj_t *acc5;
+    lv_obj_t *acc6;
+    lv_obj_t *acc7;
+    lv_obj_t *acc8;
+    lv_obj_t *acc9;
+    lv_obj_t *lbl_as0;
+    lv_obj_t *lbl_ac1;
+    lv_obj_t *lbl_as2;
+    lv_obj_t *lbl_as3;
+    lv_obj_t *lbl_as4;
+    lv_obj_t *lbl_as5;
+    lv_obj_t *ldl_as6;
+    lv_obj_t *lbl_as7;
+    lv_obj_t *lbl_as8;
+    lv_obj_t *lbl_as9;
+    lv_obj_t *obj9;
     lv_obj_t *lbl_stop;
     lv_obj_t *lbl_power;
-    lv_obj_t *obj8;
     lv_obj_t *btn_home;
     lv_obj_t *h_line;
-    lv_obj_t *obj9;
     lv_obj_t *obj10;
-    lv_obj_t *credits_button;
     lv_obj_t *obj11;
-    lv_obj_t *info_button;
+    lv_obj_t *credits_button;
     lv_obj_t *obj12;
+    lv_obj_t *info_button;
+    lv_obj_t *obj13;
     lv_obj_t *throttle_mtx;
     lv_obj_t *menu_mtx;
     lv_obj_t *img_wifi;
     lv_obj_t *lbl_throttle_page;
     lv_obj_t *prog_button2_1;
-    lv_obj_t *obj13;
-    lv_obj_t *acc_button2_1;
     lv_obj_t *obj14;
-    lv_obj_t *roster_button2_1;
+    lv_obj_t *acc_button2_1;
     lv_obj_t *obj15;
-    lv_obj_t *dd_locos;
-    lv_obj_t *btn_edit;
+    lv_obj_t *roster_button2_1;
     lv_obj_t *obj16;
+    lv_obj_t *dd_locos;
+    lv_obj_t *obj17;
     lv_obj_t *lbl_address;
     lv_obj_t *function_mtx;
     lv_obj_t *slider;
     lv_obj_t *lbl_slider;
-    lv_obj_t *obj17;
-    lv_obj_t *kbd_guest;
+    lv_obj_t *btn_edit;
     lv_obj_t *obj18;
     lv_obj_t *obj19;
+    lv_obj_t *obj20;
+    lv_obj_t *kbd_guest;
     lv_obj_t *roster_heading_1;
     lv_obj_t *btn_cancel_edit_loco;
-    lv_obj_t *obj20;
     lv_obj_t *obj21;
     lv_obj_t *obj22;
     lv_obj_t *tbl_roster;
     lv_obj_t *obj23;
-    lv_obj_t *btn_edit_loco_cancel_1;
     lv_obj_t *obj24;
-    lv_obj_t *btn_prog_edit_loco_1;
+    lv_obj_t *btn_edit_loco_cancel_1;
     lv_obj_t *obj25;
-    lv_obj_t *btn_edit_loco_done_1;
+    lv_obj_t *btn_prog_edit_loco_1;
     lv_obj_t *obj26;
-    lv_obj_t *ta_name;
+    lv_obj_t *btn_edit_loco_done_1;
     lv_obj_t *obj27;
+    lv_obj_t *ta_name;
     lv_obj_t *ta_address;
     lv_obj_t *ta_fname;
     lv_obj_t *ta_fnum;
@@ -136,9 +163,9 @@ typedef struct _objects_t {
     lv_obj_t *ta_cvv;
     lv_obj_t *ta_adr;
     lv_obj_t *cv_mtx;
+    lv_obj_t *kbd_program;
     lv_obj_t *lbl_ps1;
     lv_obj_t *lbl_ps2;
-    lv_obj_t *kbd_program;
     lv_obj_t *btn_wifi_select;
     lv_obj_t *obj34;
     lv_obj_t *btn_wifi_scan;
@@ -160,10 +187,10 @@ typedef struct _objects_t {
     lv_obj_t *obj40;
     lv_obj_t *done_button9;
     lv_obj_t *obj41;
+    lv_obj_t *kb_alpha;
+    lv_obj_t *kb_numeric;
     lv_obj_t *lbl_wifi_status;
     lv_obj_t *lbl_wifi_status2;
-    lv_obj_t *kb_numeric;
-    lv_obj_t *kb_alpha;
     lv_obj_t *lbl_scan;
     lv_obj_t *config_button9_3;
     lv_obj_t *obj42;
@@ -172,11 +199,11 @@ typedef struct _objects_t {
     lv_obj_t *obj44;
     lv_obj_t *list_scan_pg_ssids;
     lv_obj_t *txt_scan_status;
-    lv_obj_t *wifi_button;
+    lv_obj_t *wifi_button_8;
     lv_obj_t *obj45;
-    lv_obj_t *uodate_button;
+    lv_obj_t *update_button_8;
     lv_obj_t *obj46;
-    lv_obj_t *done_button_7;
+    lv_obj_t *done_button_8;
     lv_obj_t *obj47;
     lv_obj_t *obj48;
     lv_obj_t *obj49;
@@ -184,48 +211,40 @@ typedef struct _objects_t {
     lv_obj_t *ta_tft_backlight;
     lv_obj_t *ta_wifi_timeout;
     lv_obj_t *kbd_config;
-    lv_obj_t *info_button_9;
+    lv_obj_t *credits_button_8;
     lv_obj_t *obj51;
-    lv_obj_t *done_button_9;
+    lv_obj_t *info_button_8;
     lv_obj_t *obj52;
     lv_obj_t *obj53;
     lv_obj_t *credits_button_10;
     lv_obj_t *obj54;
-    lv_obj_t *done_button_10;
+    lv_obj_t *info_button_10;
     lv_obj_t *obj55;
     lv_obj_t *obj56;
-    lv_obj_t *done_button_13;
-    lv_obj_t *obj57;
-    lv_obj_t *edit_button_13;
-    lv_obj_t *obj58;
-    lv_obj_t *obj59;
-    lv_obj_t *h_line_1;
-    lv_obj_t *done_button_14;
-    lv_obj_t *obj60;
-    lv_obj_t *done_button_12;
-    lv_obj_t *obj61;
-    lv_obj_t *cancel_button_12;
-    lv_obj_t *obj62;
-    lv_obj_t *obj63;
-    lv_obj_t *selected_image;
 } objects_t;
 
 extern objects_t objects;
 
 enum ScreensEnum {
-    SCREEN_ID_MAIN = 1,
-    SCREEN_ID_THROTTLE = 2,
-    SCREEN_ID_ROSTER = 3,
-    SCREEN_ID_EDIT_LOCO = 4,
-    SCREEN_ID_PROGRAM = 5,
-    SCREEN_ID_WI_FI = 6,
-    SCREEN_ID_SCAN = 7,
-    SCREEN_ID_CONFIG = 8,
-    SCREEN_ID_CREDITS = 9,
-    SCREEN_ID_INFO = 10,
-    SCREEN_ID_ACCESSORIES = 11,
-    SCREEN_ID_EDIT_ACC = 12,
+    SCREEN_ID_EDIT_ACC = 1,
+    SCREEN_ID_ACCESSORIES = 2,
+    SCREEN_ID_MAIN = 3,
+    SCREEN_ID_THROTTLE = 4,
+    SCREEN_ID_ROSTER = 5,
+    SCREEN_ID_EDIT_LOCO = 6,
+    SCREEN_ID_PROGRAM = 7,
+    SCREEN_ID_WI_FI = 8,
+    SCREEN_ID_SCAN = 9,
+    SCREEN_ID_CONFIG = 10,
+    SCREEN_ID_CREDITS = 11,
+    SCREEN_ID_INFO = 12,
 };
+
+void create_screen_edit_acc();
+void tick_screen_edit_acc();
+
+void create_screen_accessories();
+void tick_screen_accessories();
 
 void create_screen_main();
 void tick_screen_main();
@@ -257,12 +276,6 @@ void tick_screen_credits();
 void create_screen_info();
 void tick_screen_info();
 
-void create_screen_accessories();
-void tick_screen_accessories();
-
-void create_screen_edit_acc();
-void tick_screen_edit_acc();
-
 void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);
 
@@ -275,4 +288,4 @@ void create_screens();
 
 #endif /*EEZ_LVGL_UI_SCREENS_H*/
 
-#endif // RES4827
+#endif // RES2432

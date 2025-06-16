@@ -1,10 +1,8 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-4827.eez-project]:/userPages/10",
-    "selectedBitmapObject": "[CYC-4827.eez-project]:/bitmaps/6",
-    "subnavigationSelectedItems": {
-      "variables-tab/sub-navigation/selected-item": "Global"
-    }
+    "selectedUserPageObject": "[CYC-2432THMI.eez-project]:/userPages/1",
+    "selectedBitmapObject": "[CYC-2432THMI.eez-project]:/bitmaps/1",
+    "subnavigationSelectedItems": {}
   },
   "layoutModel": {
     "rootEditor": {
@@ -25,7 +23,7 @@
           {
             "type": "border",
             "selected": 2,
-            "size": 240,
+            "size": 114.20673942565918,
             "location": "right",
             "children": [
               {
@@ -72,8 +70,6 @@
           },
           {
             "type": "border",
-            "selected": 0,
-            "size": 189.5,
             "location": "bottom",
             "children": [
               {
@@ -115,16 +111,16 @@
         ],
         "layout": {
           "type": "row",
-          "id": "#a2434af2-a9ad-4ee8-9fa3-4b824bd4765e",
+          "id": "#eb986763-ecb9-4246-8fb4-1c10d85d9d36",
           "children": [
             {
               "type": "row",
-              "id": "#cf55e67f-781e-453c-8251-9ad08150b3fc",
-              "weight": 18.21315569727392,
+              "id": "#6c8c524a-737a-4e45-9ab2-544c63e06a7e",
+              "weight": 15,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#ce711b15-58a8-4cb2-8673-0f04b0231160",
+                  "id": "#e94af210-0a7a-4d4d-b3e8-17716bb214f7",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
@@ -156,13 +152,13 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#202249e7-63c9-47c2-b4da-00f0ec047ec1",
+                  "id": "#2fcf43d1-a633-4d1a-9c47-460a79ae9b4f",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#1f313c95-18dc-425e-ba89-e25568615ce0",
+                      "id": "#9f610898-6115-4f12-bb6e-e6f11245488a",
                       "name": "Widgets Structure",
                       "component": "flow-structure",
                       "enableClose": false,
@@ -172,7 +168,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#9aa3ce99-0064-4e89-a130-64c8f12b2fb5",
+                  "id": "#176260f9-651b-4e34-b65a-90fb4495ec16",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
@@ -191,44 +187,43 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 53.84064447352027,
+              "weight": 52.28641171684296,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
                 {
                   "type": "tab",
-                  "id": "#90d01dc2-d914-4758-8361-6b413f601c06",
-                  "name": "Settings",
+                  "id": "#b13d2741-17a2-4116-9369-263327bd33b0",
+                  "name": "Main",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-4827.eez-project]:/settings",
-                    "subObjectPath": "[CYC-4827.eez-project]:/settings",
-                    "permanent": false
-                  },
-                  "icon": "material:settings"
-                },
-                {
-                  "type": "tab",
-                  "id": "#a1cdbd76-72c9-4afa-a6cb-ec2bb37044cc",
-                  "name": "Accessories",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[CYC-4827.eez-project]:/userPages/10",
+                    "objectPath": "[CYC-2432THMI.eez-project]:/userPages/1",
                     "permanent": false
                   },
                   "icon": "svg:page"
+                },
+                {
+                  "type": "tab",
+                  "id": "#b6e771fd-f404-44bd-8882-af37c724c8d4",
+                  "name": "Settings",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[CYC-2432THMI.eez-project]:/settings",
+                    "subObjectPath": "[CYC-2432THMI.eez-project]:/settings",
+                    "permanent": false
+                  },
+                  "icon": "material:settings"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
-              "id": "#60095759-ba99-4bec-b883-d2e899f98ff3",
-              "weight": 27.946199829205806,
+              "id": "#7db3ab66-ed69-4cfb-8d79-56d36025c236",
+              "weight": 32.71358828315704,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#abf2e3f0-d82b-44bb-9b64-ab840034ef48",
+                  "id": "#50aa0cba-0e2f-4ac2-b97e-3f7773d6adfa",
                   "weight": 2,
                   "children": [
                     {
@@ -239,11 +234,12 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
-                  "id": "#d6c23d06-1739-4406-b459-ed03059813f8",
+                  "id": "#51de1363-c799-4de8-84f7-8618456761d9",
                   "weight": 1,
                   "children": [
                     {
@@ -326,11 +322,11 @@
         ],
         "layout": {
           "type": "row",
-          "id": "#530cea9c-fbcc-4f31-8ef4-36d12fad9820",
+          "id": "#8662ad85-daa3-47aa-b339-ece674eafa17",
           "children": [
             {
               "type": "tabset",
-              "id": "#296bd747-0ea2-4245-9a04-4171c229c2ef",
+              "id": "#a2501b25-1bb0-4ca7-8983-87ac582139d6",
               "weight": 0,
               "enableClose": false,
               "children": [
@@ -355,7 +351,7 @@
             },
             {
               "type": "tabset",
-              "id": "#3a9e2386-1238-4fb6-8e98-12ad006be4ed",
+              "id": "#22158813-8d0a-492a-880c-05ac022bd94a",
               "weight": 0,
               "children": [
                 {
@@ -384,17 +380,17 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#faa0bf12-3f13-473c-8144-693d544af22f",
+          "id": "#76f8c16c-58cf-430d-8e5b-33d093ba57da",
           "children": [
             {
               "type": "row",
-              "id": "#f7989565-0bbe-4c6c-adbd-a94e7b2229f6",
+              "id": "#d518a738-b8db-4b1e-a094-98d6aaca73fb",
               "weight": 0,
               "width": 320,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#2c83a9be-499f-4032-96dd-6b608befec3f",
+                  "id": "#51bae7fc-3dbf-4d9c-bb40-c74b81eb030e",
                   "weight": 1,
                   "children": [
                     {
@@ -425,12 +421,12 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#9d08e4d6-bc25-499b-9642-5f8466e6b88f",
+                  "id": "#92a82afe-67f8-455e-b93b-410cd075da76",
                   "weight": 1,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#70796f28-e079-412b-9e7d-2963c547bf9b",
+                      "id": "#05811597-40c5-4805-85b7-9e97c9d1d675",
                       "name": "Active Flows",
                       "component": "active-flows",
                       "enableClose": false,
@@ -440,12 +436,12 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#bec04847-8a7e-409a-8f09-3473502abf23",
+                  "id": "#c3bd992a-309c-4ed6-9d37-8e1fa02ecb0c",
                   "weight": 2,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#5838e6b4-f49a-46bd-b938-be8698b5635c",
+                      "id": "#9b02c9b7-9b87-4b6a-a8c6-75eb0abe473f",
                       "name": "Watch",
                       "component": "watch",
                       "enableClose": false,
@@ -466,18 +462,18 @@
             },
             {
               "type": "row",
-              "id": "#9576f9cc-0167-486a-b0c4-5ca0f4d782a0",
+              "id": "#1eed9822-b2ed-4099-a9e6-6b89e16c6d33",
               "weight": 0,
               "width": 320,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#0a03e470-4015-45ba-a9c8-a536b9bab083",
+                  "id": "#24976a2f-2430-41f2-9e7e-13e06c9092b9",
                   "weight": 1,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#b2bd1fe3-8950-405b-9a6f-183c4c0b737d",
+                      "id": "#2427a660-9d76-402e-bd27-fb3273474ca1",
                       "name": "Queue",
                       "component": "queue",
                       "enableClose": false,
@@ -495,7 +491,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#3ecaf4b5-98c1-4d2b-ae27-b67bbaea0227",
+                  "id": "#87444966-63b3-4a38-a19b-fbae10fae2b9",
                   "weight": 2,
                   "children": [
                     {
@@ -526,15 +522,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#2c5c6011-3f49-40ad-9767-0404b8056f77",
+          "id": "#5d2e3613-b735-40be-903f-2accf36e0d50",
           "children": [
             {
               "type": "row",
-              "id": "#75c561c5-ed93-4720-a5d5-ac030eae8be5",
+              "id": "#adc839a0-4aa5-4277-8c58-8e11ec8b5f8d",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#1ebaab1b-9801-4102-b50a-1f0118593e51",
+                  "id": "#eb3d9c18-e76f-42cb-8b9b-10ebd37127f3",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -543,7 +539,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#5368d71b-f1c9-4dcf-8866-00f3f9762450",
+                      "id": "#15c7ef9c-54a9-488b-b670-9c2b3dc3a384",
                       "name": "Bitmaps",
                       "component": "bitmaps",
                       "enableClose": false
@@ -553,7 +549,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#992333b5-bb5d-499f-99c4-e56e5e7ae7bc",
+                  "id": "#1772e5c1-4360-432f-bb83-5e17357b6ea3",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -562,7 +558,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#a3cb839d-52c8-45dc-aef9-9084c1812d94",
+                      "id": "#1f792e4e-1efc-4e5e-ab6f-f302c697c57e",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -587,11 +583,11 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#7538166c-bcf6-491d-9068-ad4e3fbb3268",
+          "id": "#0dcf3bb4-3698-4dd2-bded-1aa2444aeb56",
           "children": [
             {
               "type": "tabset",
-              "id": "#24a0e310-4b76-4a11-b77a-d5a747ba8338",
+              "id": "#4ead7e6e-add6-4c2f-8f7b-0d22cfd763fa",
               "enableDrop": false,
               "enableDrag": false,
               "enableClose": false,
@@ -599,7 +595,7 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#5bee4216-3029-44ce-bdd7-8194b01ad444",
+                  "id": "#e25e49f5-5b57-4345-b649-b23329eefbb0",
                   "component": "glyphs",
                   "enableClose": false
                 }
@@ -607,7 +603,7 @@
             },
             {
               "type": "tabset",
-              "id": "#9a9ccc0b-7609-40ae-be94-48fa0c3a2092",
+              "id": "#ae2ac5b2-8607-47b8-858f-4f27ac5a2465",
               "enableDrop": false,
               "enableDrag": false,
               "enableClose": false,
@@ -615,7 +611,7 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#15031a0b-ea96-495e-852a-8eac3224ccb8",
+                  "id": "#d2795233-26f8-4bcc-ab01-802fd8266cff",
                   "component": "editor",
                   "enableClose": false
                 }
@@ -637,15 +633,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#958d8673-8d42-4b8e-9951-a282a3dfa463",
+          "id": "#c483a7f1-4fdb-446b-a93d-a7dc27991267",
           "children": [
             {
               "type": "row",
-              "id": "#e551693d-6816-47cc-b4e9-26060a4c4009",
+              "id": "#a879a2b5-1a7c-43fa-99f0-301fdfcf8125",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#a1016514-7b71-4bf4-ad50-621e9762bbf7",
+                  "id": "#198fb423-b132-40fd-8c17-07f3f845c8ee",
                   "children": [
                     {
                       "type": "tab",
@@ -665,7 +661,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#8f5ce63f-1a0a-404a-8f18-d7218f069a16",
+                  "id": "#38616aba-f402-436b-9371-bb0c38530b94",
                   "children": [
                     {
                       "type": "tab",
@@ -694,15 +690,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#4b67156c-d506-4166-b6e2-a6592865012b",
+          "id": "#ce3bd094-9fff-462b-9dbd-2e5493e4b3d6",
           "children": [
             {
               "type": "row",
-              "id": "#e3120f6c-cccf-4b8e-bcf2-67694e2d4c47",
+              "id": "#e3d1103a-dfe4-4315-a5a4-8433ebdd153f",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#21360a27-769a-4203-9040-092985b47694",
+                  "id": "#67d1a52d-0ed5-41d4-91fc-c5229548270a",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -711,7 +707,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#1d58cfd2-4dc1-4cab-b8d4-d4e813a271f3",
+                      "id": "#aacc0a67-63e1-4c21-983e-76c02380c9bf",
                       "name": "Styles",
                       "component": "styles",
                       "enableClose": false
@@ -720,7 +716,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#bda40d58-ba6a-4dd9-a59b-7f6f13609bc4",
+                  "id": "#1e638eb9-a710-4598-953c-03e77e8907a9",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -729,7 +725,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#3fd46090-acd6-434d-8b52-28ea29dd0fbb",
+                      "id": "#49b55f6d-a6ac-4857-a84a-6905fd66ccdd",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -754,15 +750,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#e5eb5ff5-3f39-44bb-a869-e6984533235e",
+          "id": "#2238b02c-da69-47bb-ae31-699032e4c14a",
           "children": [
             {
               "type": "row",
-              "id": "#f2451f29-a321-4587-92a1-c0865d0b61ab",
+              "id": "#c3d9f6da-cc42-478b-9f2a-c2439b35fde3",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#bd000bbb-1d0b-4306-bc03-36703d34ccfd",
+                  "id": "#cc8c4c45-7946-4a14-af54-b94efe4a257e",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -771,7 +767,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#8bc92a52-7c06-45f9-b49c-e16eb9f14c36",
+                      "id": "#0a86925e-9583-4e11-b2dc-7f55ff568ddc",
                       "name": "Styles",
                       "component": "styles",
                       "enableClose": false
@@ -780,7 +776,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#9d904968-3e3a-42b6-b3d8-117641fbf108",
+                  "id": "#810724cc-8bca-434b-b5b2-8571aa6568ba",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -789,7 +785,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#2f83bc23-1beb-4a3c-8a3d-1b4a418e26ca",
+                      "id": "#0259cd07-52be-45b8-a94d-fe8eb8f42e6c",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -814,15 +810,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#4c9f758b-0bf3-46ed-b699-d8728f204a0a",
+          "id": "#7c493452-9f71-46c6-8ba3-6a9335a1e9fd",
           "children": [
             {
               "type": "row",
-              "id": "#7640212f-c1cb-44bf-b6bb-6a5955bb4201",
+              "id": "#350a22ed-ca74-4e41-ac85-5389ac28f942",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#ea65c20f-e1eb-4123-b935-abe9dac99292",
+                  "id": "#41ae5f50-6522-4840-8384-f4957c4d8b36",
                   "enableDrop": false,
                   "enableDrag": false,
                   "enableClose": false,
@@ -830,7 +826,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#ce20a9ef-56a9-4a1b-ac4c-1a1a42ca150d",
+                      "id": "#28a6b63d-4bfc-43be-a688-4353c7b05798",
                       "component": "themes",
                       "enableClose": false
                     }
@@ -838,7 +834,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#2eeca42e-f1cf-4807-b033-a1d7ebe097d5",
+                  "id": "#8ffd5fb5-a41c-4309-933c-ec35945d3866",
                   "enableDrop": false,
                   "enableDrag": false,
                   "enableClose": false,
@@ -846,7 +842,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#16ab9b41-a459-4300-832d-785e28b7ff2c",
+                      "id": "#6852d0a4-076e-4564-bbbf-91a7d5d1e272",
                       "component": "colors",
                       "enableClose": false
                     }
@@ -870,15 +866,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#9683ba29-4bb0-4fd0-9393-5aab022c19c9",
+          "id": "#813f0d99-1f24-40e5-904f-d7133d5676e6",
           "children": [
             {
               "type": "row",
-              "id": "#70dd4eb3-b53f-43c7-9673-0044cae45da3",
+              "id": "#3a2e8a89-b006-4bf4-949d-9852d3149a12",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#601b096c-8879-4448-9c4f-03b222214b4f",
+                  "id": "#50aa5071-ddac-4e02-a985-fc0a58ca90ab",
                   "children": [
                     {
                       "type": "tab",
@@ -891,7 +887,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#5add4797-665c-467d-a726-31a85d4c550b",
+                  "id": "#8beee11e-39a1-42ca-b40d-615dae061785",
                   "children": [
                     {
                       "type": "tab",
@@ -904,7 +900,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#101155e1-eda0-4aa0-93d6-2834fb0c0322",
+                  "id": "#6a4393ad-4749-43be-b28d-f3248acb9e03",
                   "children": [
                     {
                       "type": "tab",
@@ -933,15 +929,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#0af09a94-ccab-48e6-80df-f6100438358c",
+          "id": "#8d7e3cda-d556-4570-b06a-51ab99c1031e",
           "children": [
             {
               "type": "row",
-              "id": "#c59dff9b-0979-41a7-886f-4a9a82a4896f",
+              "id": "#60c9550a-934f-478a-962c-b7fa64693846",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#aa520185-397f-4e0d-bc79-b017f0d551ce",
+                  "id": "#fcef62cc-c563-4fa4-8d6b-aa01dc86292f",
                   "weight": 50,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -950,7 +946,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#8bd7efa2-fc9f-42e9-a2b6-51052555781e",
+                      "id": "#50e794cd-53e2-4d9c-8f23-a5ed48b38063",
                       "name": "Groups",
                       "component": "groups",
                       "enableClose": false
@@ -959,7 +955,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#1f629efc-f1a0-4976-9426-44ac27ebabed",
+                  "id": "#706591a4-193d-4389-ab00-47591eae124a",
                   "weight": 50,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -968,7 +964,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#bbb3d1d4-78e1-4f94-aa72-b7468683c8dd",
+                      "id": "#ee2da2dc-d6c9-4e39-afcf-b7346da99493",
                       "name": "Group Widgets",
                       "component": "order",
                       "enableClose": false
@@ -985,75 +981,20 @@
   "selectedBuildConfiguration": "Default",
   "features": {},
   "objects": {
-    "[CYC-DCCpp-4827-6Apr25.eez-project]:/userPages/0[flow-state]": {
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/0[flow-state]": {
       "selection": {
         "0": {
-          "2": {},
-          "3": {},
-          "10": {}
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -136,
-          "y": -240
-        },
-        "scale": 1
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-DCCpp-4827-6Apr25.eez-project]:/userPages/1[flow-state]": {
-      "selection": {},
-      "transform": {
-        "translate": {
-          "x": -136,
-          "y": -240
-        },
-        "scale": 1
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-DCCpp-4827-6Apr25.eez-project]:/userPages/7[flow-state]": {
-      "selection": {},
-      "transform": {
-        "translate": {
-          "x": -136,
-          "y": -240
-        },
-        "scale": 1
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-DCCpp-4827-6Apr25.eez-project]:/userPages/8[flow-state]": {
-      "selection": {
-        "0": {
-          "1": {},
-          "2": {
+          "11": {
             "$selected": true
           }
         }
       },
       "transform": {
         "translate": {
-          "x": -136,
-          "y": -240
+          "x": -202,
+          "y": -333
         },
-        "scale": 1
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1062,12 +1003,122 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-DCCpp-4827-6Apr25.eez-project]:/userPages/9[flow-state]": {
-      "selection": {},
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {}
+      },
       "transform": {
         "translate": {
-          "x": -136,
-          "y": -240
+          "x": -175,
+          "y": -319
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/2[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -213,
+          "y": -325
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/3[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -210,
+          "y": -314
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/4[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -266.2298701298702,
+          "y": -334.0151515151514
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/5[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/6[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/7[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
         },
         "scale": 1
       },
@@ -1078,25 +1129,98 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/0[flow-state]": {
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/8[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/9[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-17Mar25.eez-project]:/userPages/10[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {
+          "16": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -280
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/0[flow-state]": {
       "selection": {
         "0": {
           "2": {},
           "3": {},
-          "4": {},
-          "5": {},
+          "7": {},
           "8": {
             "$selected": true
           },
-          "11": {}
+          "10": {}
         }
       },
       "transform": {
         "translate": {
-          "x": -187.08333333333326,
-          "y": -347.8379025591094
+          "x": -120,
+          "y": -400
         },
-        "scale": 1.25
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1105,21 +1229,20 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/8[flow-state]": {
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/5[flow-state]": {
       "selection": {
         "0": {
-          "1": {},
-          "2": {},
-          "3": {},
-          "4": {}
+          "17": {
+            "$selected": true
+          }
         }
       },
       "transform": {
         "translate": {
-          "x": -136,
-          "y": -380
+          "x": -120,
+          "y": -160
         },
-        "scale": 1.5
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1128,7 +1251,59 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/9[flow-state]": {
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/9[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/8[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -280
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-DCCpp-2432-4Apr25.eez-project]:/userPages/6[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -160
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/8[flow-state]": {
       "selection": {
         "0": {
           "3": {
@@ -1138,10 +1313,10 @@
       },
       "transform": {
         "translate": {
-          "x": -136,
-          "y": -480
+          "x": -120,
+          "y": -280
         },
-        "scale": 1.5
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1150,47 +1325,38 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/4[flow-state]": {
+    "[CYC-2432THMI.eez-project]:/userPages/9[flow-state]": {
       "selection": {
         "0": {
-          "2": {},
-          "10": {},
-          "11": {
-            "$selected": true
-          },
-          "12": {}
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -134,
-          "y": -355
-        },
-        "scale": 1.5
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-4827.eez-project]:/userPages/1[flow-state]": {
-      "selection": {
-        "0": {
-          "0": {},
-          "3": {},
-          "8": {
+          "3": {
             "$selected": true
           }
         }
       },
       "transform": {
         "translate": {
-          "x": -136,
+          "x": -120,
+          "y": -280
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/0[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
           "y": -400
         },
-        "scale": 1.5
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1199,112 +1365,23 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/2[flow-state]": {
+    "[CYC-2432THMI.eez-project]:/userPages/1[flow-state]": {
       "selection": {
         "0": {
-          "0": {}
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -136,
-          "y": -240
-        },
-        "scale": 1.5
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-4827.eez-project]:/userPages/3[flow-state]": {
-      "selection": {
-        "0": {
-          "0": {},
-          "7": {
-            "$selected": true
-          }
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -198.58928571428572,
-          "y": -345.0178571428571
-        },
-        "scale": 1.5
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-4827.eez-project]:/userPages/5[flow-state]": {
-      "selection": {
-        "0": {
-          "0": {},
-          "10": {},
-          "14": {
-            "$selected": true
-          }
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -137,
-          "y": -329
-        },
-        "scale": 1.5
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-4827.eez-project]:/userPages/6[flow-state]": {
-      "selection": {
-        "0": {
-          "0": {}
-        }
-      },
-      "transform": {
-        "translate": {
-          "x": -156,
-          "y": -339
-        },
-        "scale": 1.5
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[CYC-4827.eez-project]:/userPages/7[flow-state]": {
-      "selection": {
-        "0": {
-          "1": {},
           "2": {},
-          "3": {},
-          "4": {},
-          "5": {},
+          "4": {
+            "$selected": true
+          },
           "6": {},
-          "7": {},
-          "8": {}
+          "7": {}
         }
       },
       "transform": {
         "translate": {
-          "x": -155,
-          "y": -342
+          "x": -120,
+          "y": -400
         },
-        "scale": 1.5
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1313,7 +1390,66 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/11[flow-state]": {
+    "[CYC-2432THMI.eez-project]:/userPages/3[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -520
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/4[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "$selected": true
+          },
+          "11": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -280
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/5[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -400
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/6[flow-state]": {
       "selection": {
         "0": {
           "1": {
@@ -1323,10 +1459,10 @@
       },
       "transform": {
         "translate": {
-          "x": -47.5,
-          "y": -332
+          "x": -120,
+          "y": -29.544516929068664
         },
-        "scale": 1.25
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1335,20 +1471,90 @@
         "scrollLeft": 0
       }
     },
-    "[CYC-4827.eez-project]:/userPages/10[flow-state]": {
+    "[CYC-2432THMI.eez-project]:/userPages/7[flow-state]": {
       "selection": {
         "0": {
-          "28": {
+          "0": {},
+          "2": {
+            "$selected": true
+          },
+          "7": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -478.17806771627465
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/2[flow-state]": {
+      "selection": {
+        "0": {
+          "3": {
             "$selected": true
           }
         }
       },
       "transform": {
         "translate": {
-          "x": -135.5,
-          "y": -332
+          "x": -120,
+          "y": -400
         },
-        "scale": 1.25
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/10[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -400
+        },
+        "scale": 2
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-2432THMI.eez-project]:/userPages/11[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {
+            "$selected": true
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -120,
+          "y": -280
+        },
+        "scale": 2
       },
       "timeline": {
         "isEditorActive": false,
@@ -1374,13 +1580,13 @@
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
     "TEXT",
-    "BORDER",
     "PADDING",
+    "BORDER",
     "SHADOW",
     "BACKGROUND"
   ],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,
-  "flowZoom": 1.25,
+  "flowZoom": 2,
   "implementationLanguage": "C"
 }

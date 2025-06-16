@@ -1,6 +1,6 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES2432
 
 #include "styles.h"
 #include "images.h"
@@ -11,4 +11,5 @@
 
 
 
-#endif // RES4827
+
+#endif // RES2432

@@ -1,6 +1,6 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES2432
 
 #ifndef EEZ_LVGL_UI_EVENTS_H
 #define EEZ_LVGL_UI_EVENTS_H
@@ -48,4 +48,4 @@ extern void action_fclear_slot(lv_event_t * e);
 
 #endif /*EEZ_LVGL_UI_EVENTS_H*/
 
-#endif // RES4827
+#endif // RES2432

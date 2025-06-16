@@ -1,6 +1,6 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES2432
 
 #ifndef EEZ_LVGL_UI_STRUCTS_H
 #define EEZ_LVGL_UI_STRUCTS_H
@@ -25,4 +25,5 @@ using namespace eez;
 
 #endif /*EEZ_LVGL_UI_STRUCTS_H*/
 
-#endif // RES4827
+
+#endif // RES2432

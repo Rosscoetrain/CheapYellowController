@@ -1,9 +1,9 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES2432
 
-#ifndef EEZ_LVGL_UI_FONTS_H
-#define EEZ_LVGL_UI_FONTS_H
+#ifndef EEZ_LVGL_UI_STYLES_H
+#define EEZ_LVGL_UI_STYLES_H
 
 #include <lvgl.h>
 
@@ -17,6 +17,6 @@ extern "C" {
 }
 #endif
 
-#endif /*EEZ_LVGL_UI_FONTS_H*/
+#endif /*EEZ_LVGL_UI_STYLES_H*/
 
-#endif // RES4827
+#endif // RES2432

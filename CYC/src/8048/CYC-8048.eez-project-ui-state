@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/8",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/0",
     "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -24,6 +24,7 @@
           },
           {
             "type": "border",
+            "selected": 2,
             "size": 240,
             "location": "right",
             "children": [
@@ -72,7 +73,7 @@
           {
             "type": "border",
             "selected": 0,
-            "size": 129.5,
+            "size": 204.5,
             "location": "bottom",
             "children": [
               {
@@ -197,6 +198,17 @@
               "children": [
                 {
                   "type": "tab",
+                  "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
+                  "name": "Main",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/0",
+                    "permanent": false
+                  },
+                  "icon": "svg:page"
+                },
+                {
+                  "type": "tab",
                   "id": "#ea342305-9a75-4f08-a34f-26474f3011af",
                   "name": "Settings",
                   "component": "editor",
@@ -206,17 +218,6 @@
                     "permanent": false
                   },
                   "icon": "material:settings"
-                },
-                {
-                  "type": "tab",
-                  "id": "#2c2fc19d-c36d-451c-b7fe-407c37eef5a2",
-                  "name": "Credits",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/8",
-                    "permanent": false
-                  },
-                  "icon": "svg:page"
                 }
               ],
               "active": true
