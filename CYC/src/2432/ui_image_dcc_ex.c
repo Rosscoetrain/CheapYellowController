@@ -1,3 +1,7 @@
+#include "../../defines.h"
+
+#ifdef RES2432
+
 #ifdef __has_include
     #if __has_include("lvgl.h")
         #ifndef LV_LVGL_H_INCLUDE_SIMPLE
@@ -90,3 +94,6 @@ const lv_img_dsc_t img_dcc_ex = {
   .data_size = 8208,
   .data = img_dcc_ex_map,
 };
+
+#endif // RES2432
+

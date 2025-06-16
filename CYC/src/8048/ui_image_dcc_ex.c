@@ -148,3 +148,4 @@ const lv_img_dsc_t img_dcc_ex = {
 };
 
 #endif // RES8048
+
