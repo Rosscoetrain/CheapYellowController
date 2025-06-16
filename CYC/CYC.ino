@@ -68,8 +68,10 @@
 /*
  *  The defines below are only required when compiling with Arduino IDE 
  *
- *  Uncomment one of the display board defines and the applicable resolution defines.
- *  eg Sunton ESP32-4827S043R = ESP4827R043R and RES4827
+ *  Uncomment one of the display board defines.
+ *  eg Sunton ESP32-4827S043R = ESP4827R043R
+ *  
+ *  Additionally uncomment the applicable resolution define in file defines.h
  * 
  *  For platformio these are handled in platformio.ini
 */
@@ -83,7 +85,7 @@
 //#define ESP3248S035R           // Sunton ESP32-3248S035R              ESP32     .  
 //#define ESP3248W535C           //Guition JC3248W535C - in testing     ESP32-S3  tick
 //#define ESP4827S043C           // Sunton ESP32-4827S043C              ESP32-S3  tick
-#define ESP4827S043R           // Sunton ESP32-4827S043R              ESP32-S3  tick
+//#define ESP4827S043R           // Sunton ESP32-4827S043R              ESP32-S3  tick
 //#define ESP32DIS06043H         // Elcrow ESP32-DIS06043H            ESP32-S3  tick   by RKS
 //#define ESP32DIS08070H         // Elcrow ESP32-DIS08070H            ESP32-S3         by RKS
 
@@ -92,7 +94,7 @@
 //#define ESP4848S040C           //Guition JC4848W440C - in development
 //#define ESP8048S043C           // Sunton ESP32-8048S043C              ESP32-S3  tick  
 //#define ESP8048S050C           // Sunton ESP32-8048S050C              ESP32-S3  tick
-//#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
+#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
 
 
 #endif
