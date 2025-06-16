@@ -1,6 +1,7 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES3248
+
 #include "styles.h"
 #include "images.h"
 #include "fonts.h"
@@ -9,4 +10,4 @@
 #include "screens.h"
 
 
-#endif // RES4827
+#endif // RES3248

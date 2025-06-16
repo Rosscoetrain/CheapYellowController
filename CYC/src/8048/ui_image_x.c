@@ -1,6 +1,6 @@
 #include "../../defines.h"
 
-#ifdef RES4827
+#ifdef RES8048
 
 #ifdef __has_include
     #if __has_include("lvgl.h")
@@ -83,4 +83,4 @@ const lv_img_dsc_t img_x = {
   .data = img_x_map,
 };
 
-#endif // RES4827
+#endif // RES8048

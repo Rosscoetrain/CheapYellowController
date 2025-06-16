@@ -1,3 +1,7 @@
+#include "../../defines.h"
+
+#ifdef RES4827
+
 #include "images.h"
 
 const ext_img_desc_t images[7] = {
@@ -9,3 +13,5 @@ const ext_img_desc_t images[7] = {
     { "RHC", &img_rhc },
     { "RHT", &img_rht },
 };
+
+#endif // RES4827
