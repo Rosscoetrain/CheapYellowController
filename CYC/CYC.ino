@@ -169,14 +169,15 @@ void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* 
 */
 void setBacklight(uint8_t brightness)
 {
-#ifndef PLATFORMIO_BUILD
+
+//#ifndef PLATFORMIO_BUILD
   ledcSetup(0, 5000, 8);                          //If using ESP Boards 2.0.x LEDChannel, frequency, resolution
   ledcAttachPin(GFX_BL, 0);                       //If using ESP Boards 2.0.x Pin, LEDChannel
   ledcWrite(0, brightness);                       //If using ESP Boards 2.0.x LEDChannel, Brightness* 0-255
-#else
-  ledcAttachChannel(GFX_BL, 5000, 8, 0);          //If using ESP Boards 3.x Pin, Frequency, Resolution, Channel
-  ledcWrite(GFX_BL, brightness);                  //If using ESP Boards 3.x Pin, Brightness
-#endif
+//#else
+//  ledcAttachChannel(GFX_BL, 5000, 8, 0);          //If using ESP Boards 3.x Pin, Frequency, Resolution, Channel
+//  ledcWrite(GFX_BL, brightness);                  //If using ESP Boards 3.x Pin, Brightness
+//#endif
 }
 /*
  ********************************************************************************************************

@@ -22,11 +22,12 @@
 #include <Arduino.h>
 #include <lvgl.h>
 #include <WiFi.h>
-//#ifndef ESP32DIS08070H
+#ifndef ESP32DIS08070H
 #include <Arduino_GFX_Library.h>
-//#else
+#else
+#include <LovyanGFX.hpp>
 //#include <Adafruit_GFX.h>
-//#endif
+#endif
 
 #include <EEPROM.h>
 //#include <DCCEXProtocol.h>

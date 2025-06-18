@@ -2,7 +2,7 @@
 #define ESP32_JC8048W550C_H
 
 /*******************************************************************************
- * Start of Arduino_GFX setting
+ * Start of LovyanGFX setting
  ******************************************************************************/
 
 #define GFX_BL 2 // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
@@ -20,53 +20,94 @@
 //#define GFX_DEV_DEVICE ESP32_8048W550
 #define RGB_PANEL
 
-
-//// Uncomment for ST7262 IPS LCD 800x480
-// Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
-//     40 /* DE */, 41 /* VSYNC */, 39 /* HSYNC */, 42 /* PCLK */,
-//     45 /* R0 */, 48 /* R1 */, 47 /* R2 */, 21 /* R3 */, 14 /* R4 */,
-//     5 /* G0 */, 6 /* G1 */, 7 /* G2 */, 15 /* G3 */, 16 /* G4 */, 4 /* G5 */,
-//     8 /* B0 */, 3 /* B1 */, 46 /* B2 */, 9 /* B3 */, 1 /* B4 */,
-//     0 /* hsync_polarity */, 8 /* hsync_front_porch */, 4 /* hsync_pulse_width */, 8 /* hsync_back_porch */,
-//     0 /* vsync_polarity */, 8 /* vsync_front_porch */, 4 /* vsync_pulse_width */, 8 /* vsync_back_porch */,
-//     1 /* pclk_active_neg */, 16000000 /* prefer_speed */);
-
-// Arduino_RGB_Display *gfx = new Arduino_RGB_Display(DISPLAY_WIDTH, DISPLAY_HEIGHT, rgbpanel, ROTATION, AUTO_FLUSH);
-
-
-// From https://github.com/moononournation/Arduino_GFX/discussions/367#discussioncomment-7431983
-
-//Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
-//  41 /* DE */, 40 /* VSYNC */, 39 /* HSYNC */, 0 /* PCLK */,
-//  14 /* R0 */, 21 /* R1 */, 47 /* R2 */, 48 /* R3 */, 45 /* R4 */,
-//  9 /* G0 */, 46 /* G1 */, 3 /* G2 */, 8 /* G3 */, 16 /* G4 */, 1 /* G5 */,
-//  15 /* B0 */, 7 /* B1 */, 6 /* B2 */, 5 /* B3 */, 4 /* B4 */,
-//  0 /* hsync_polarity */, 40 /* hsync_front_porch */, 48 /* hsync_pulse_width */, 40 /* hsync_back_porch */,
-//  0 /* vsync_polarity */, 1 /* vsync_front_porch */, 31 /* vsync_pulse_width */, 13 /* vsync_back_porch */);
-
-//  Arduino_RGB_Display *gfx = new Arduino_RGB_Display(
-//  DISPLAY_WIDTH /* width */, DISPLAY_HEIGHT /* height */, rgbpanel, ROTATION /* rotation */, AUTO_FLUSH /* auto_flush */);
-
-
-// From https://www.elecrow.com/wiki/assets/images/CrowPanel_ESP32_HMI_7.0-inch_Display/ESP32-7.0-DIAGRAM.webp
-// R0 = R3 on board
-// G0 = G2 on board
-// B0 = B3 on board
-
-Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
-  41 /* DE */, 40 /* VSYNC */, 39 /* HSYNC */, 0 /* PCLK */,
-  14 /* R0 */, 21 /* R1 */, 47 /* R2 */, 48 /* R3 */, 45 /* R4 */,
-  9 /* G0 */, 46 /* G1 */, 3 /* G2 */, 8 /* G3 */, 16 /* G4 */, 1 /* G5 */,
-  15 /* B0 */, 7 /* B1 */, 6 /* B2 */, 5 /* B3 */, 4 /* B4 */,
-  0 /* hsync_polarity */, 40 /* hsync_front_porch */, 48 /* hsync_pulse_width */, 40 /* hsync_back_porch */,
-  0 /* vsync_polarity */, 1 /* vsync_front_porch */, 31 /* vsync_pulse_width */, 13 /* vsync_back_porch */);
-
-  Arduino_RGB_Display *gfx = new Arduino_RGB_Display(
-  DISPLAY_WIDTH /* width */, DISPLAY_HEIGHT /* height */, rgbpanel, ROTATION /* rotation */, AUTO_FLUSH /* auto_flush */);
+#define TFT_BL 2
 
 
 
-Arduino_DataBus *bus = create_default_Arduino_DataBus();
+
+#define LGFX_AUTODETECT
+#include <LGFX_AUTODETECT.hpp>
+
+//#include <lv_demo.h>
+#include <lvgl.h>
+
+/*Change to your screen resolution*/
+//static const uint16_t screenWidth  = 800;
+//static const uint16_t screenHeight = 480;
+
+//static lv_disp_draw_buf_t draw_buf;
+//static lv_color_t buf[2][ screenWidth * 10 ];
+
+LGFX gfx;
+
+
+
+
+/*
+LGFX::LGFX(void) {
+  {
+    auto cfg = _bus_instance.config();
+    cfg.panel = &_panel_instance;
+
+    cfg.pin_d0 = GPIO_NUM_15; // B0
+    cfg.pin_d1 = GPIO_NUM_7;  // B1
+    cfg.pin_d2 = GPIO_NUM_6;  // B2
+    cfg.pin_d3 = GPIO_NUM_5;  // B3
+    cfg.pin_d4 = GPIO_NUM_4;  // B4
+
+    cfg.pin_d5 = GPIO_NUM_9;  // G0
+    cfg.pin_d6 = GPIO_NUM_46; // G1
+    cfg.pin_d7 = GPIO_NUM_3;  // G2
+    cfg.pin_d8 = GPIO_NUM_8;  // G3
+    cfg.pin_d9 = GPIO_NUM_16; // G4
+    cfg.pin_d10 = GPIO_NUM_1; // G5
+
+    cfg.pin_d11 = GPIO_NUM_14; // R0
+    cfg.pin_d12 = GPIO_NUM_21; // R1
+    cfg.pin_d13 = GPIO_NUM_47; // R2
+    cfg.pin_d14 = GPIO_NUM_48; // R3
+    cfg.pin_d15 = GPIO_NUM_45; // R4
+
+    cfg.pin_henable = GPIO_NUM_41;
+    cfg.pin_vsync = GPIO_NUM_40;
+    cfg.pin_hsync = GPIO_NUM_39;
+    cfg.pin_pclk = GPIO_NUM_0;
+    cfg.freq_write = 15000000;
+
+    cfg.hsync_polarity = 0;
+    cfg.hsync_front_porch = 40;
+    cfg.hsync_pulse_width = 48;
+    cfg.hsync_back_porch = 40;
+
+    cfg.vsync_polarity = 0;
+    cfg.vsync_front_porch = 1;
+    cfg.vsync_pulse_width = 31;
+    cfg.vsync_back_porch = 13;
+
+    cfg.pclk_active_neg = 1;
+    cfg.de_idle_high = 0;
+    cfg.pclk_idle_high = 0;
+
+    _bus_instance.config(cfg);
+  }
+  {
+    auto cfg = _panel_instance.config();
+    cfg.memory_width = 800;
+    cfg.memory_height = 480;
+    cfg.panel_width = 800;
+    cfg.panel_height = 480;
+    cfg.offset_x = 0;
+    cfg.offset_y = 0;
+    _panel_instance.config(cfg);
+  }
+  _panel_instance.setBus(&_bus_instance);
+  setPanel(&_panel_instance);
+}
+*/
+
+
+
+
 
 /*******************************************************************************
  * Capacitive Touch
