@@ -75,7 +75,7 @@ void my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data)
 */
 
 #include <SPI.h>
-#include <XPT2046_Touchscreen.h>
+#include <xpt2046.h>
 
 #define XPT2046_IRQ 36
 #define XPT2046_MOSI 13

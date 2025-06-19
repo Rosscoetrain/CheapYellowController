@@ -34,7 +34,9 @@ Arduino_DataBus *bus = create_default_Arduino_DataBus();
  * End of Arduino_GFX setting
  ******************************************************************************/
 
-#include <XPT2046_Touchscreen.h>
+//#include <XPT2046_Touchscreen.h>
+#include <xpt2046.h>
+
 #include <SPI.h>
 
 #define TOUCH_CS 38   
@@ -45,7 +47,8 @@ Arduino_DataBus *bus = create_default_Arduino_DataBus();
 
 class TouchConfig {
   public:
-    XPT2046_Touchscreen* ts;
+//    XPT2046_Touchscreen* ts;
+    XPT2046* ts;
     SPIClass* touchSPI;
 
     // MAP TOUCH COORDINATES TO SCREEN DIMENSIONS
@@ -69,7 +72,8 @@ class TouchConfig {
     }
 
     void getScaledPoint(int& x, int& y, int& z) {
-      if (ts->touched()) {
+//      if (ts->touched()) {
+      if (ts->pressed()) {
         TS_Point p = ts->getPoint();
         // Scale the point to the screen dimensions
         x = constrain(map(p.x, minX, maxX, 0, SCREEN_WIDTH), 0, SCREEN_WIDTH);
@@ -79,7 +83,8 @@ class TouchConfig {
     }
 
     bool isTouched() {
-      return ts->touched();
+//      return ts->touched();
+      return ts->pressed();
     }
 };
 
