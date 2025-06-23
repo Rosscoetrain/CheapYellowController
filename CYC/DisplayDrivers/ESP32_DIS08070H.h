@@ -1,5 +1,5 @@
-#ifndef ESP32_JC8048W550C_H
-#define ESP32_JC8048W550C_H
+#ifndef ESP32_DIS08070H_H
+#define ESP32_DIS08070H_H
 
 /*******************************************************************************
  * Start of LovyanGFX setting
@@ -21,6 +21,8 @@
 #define RGB_PANEL
 
 #define TFT_BL 2
+
+//#define DIRECT_MODE
 
 #include <LovyanGFX.hpp>
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
@@ -105,11 +107,29 @@ public:
 };
 
 
-LGFX gfx;
+LGFX *gfx = new LGFX();
 
 
 
 
+/* Display flushing */
+void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p)
+{
+
+  uint32_t w = (area->x2 - area->x1 + 1);
+  uint32_t h = (area->y2 - area->y1 + 1);
+  
+
+  //lcd.fillScreen(TFT_WHITE);
+#if (LV_COLOR_16_SWAP != 0)
+ gfx->pushImageDMA(area->x1, area->y1, w, h,(lgfx::rgb565_t*)&color_p->full);
+#else
+  gfx->pushImageDMA(area->x1, area->y1, w, h,(lgfx::rgb565_t*)&color_p->full);//
+#endif
+
+  lv_disp_flush_ready(disp);
+
+}
 
 
 
@@ -122,8 +142,10 @@ LGFX gfx;
 
 #define TOUCH_GT911_SCL 20
 #define TOUCH_GT911_SDA 19
-#define TOUCH_GT911_INT -1
-#define TOUCH_GT911_RST 38
+//#define TOUCH_GT911_INT -1
+//#define TOUCH_GT911_RST 38
+#define TOUCH_GT911_INT 3
+#define TOUCH_GT911_RST 4
 
 #define TOUCH_GT911_ROTATION ROTATION_NORMAL
 #define TOUCH_MAP_X1 0

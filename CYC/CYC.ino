@@ -87,14 +87,14 @@
 //#define ESP4827S043C           // Sunton ESP32-4827S043C              ESP32-S3  tick
 //#define ESP4827S043R           // Sunton ESP32-4827S043R              ESP32-S3  tick
 //#define ESP32DIS06043H         // Elcrow ESP32-DIS06043H            ESP32-S3  tick   by RKS
-//#define ESP32DIS08070H         // Elcrow ESP32-DIS08070H            ESP32-S3         by RKS
+#define ESP32DIS08070H         // Elcrow ESP32-DIS08070H            ESP32-S3         by RKS
 
 //#define ESP4827W543C           //Guition JC4827W543C - in testing
 //#define ESP4827W543R           //Guition JC4827W543R - in testing
 //#define ESP4848S040C           //Guition JC4848W440C - in development
 //#define ESP8048S043C           // Sunton ESP32-8048S043C              ESP32-S3  tick  
 //#define ESP8048S050C           // Sunton ESP32-8048S050C              ESP32-S3  tick
-#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
+//#define ESP8048W550C           //Guition JC8048W550C                  ESP32-S3  tick         
 
 
 #endif
@@ -148,6 +148,7 @@ static void ta_event_cb(lv_event_t * e)
  * LVGL Display Flush
  ********************************************************************************************************
 */
+#ifndef ESP32DIS08070H
 void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* color_p ) 
 {
 //  #ifndef DIRECT_MODE
@@ -162,6 +163,8 @@ void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* 
 //  #endif
   lv_disp_flush_ready( disp_drv );
 }
+#endif
+
 /*
  ********************************************************************************************************
  * Backlight Brightness Control
@@ -187,12 +190,14 @@ void setBacklight(uint8_t brightness)
 void setup()
 {
   Serial.begin(115200);
+  Serial.println("Starting");
 
   #if defined ESP2432THMIR
     pinMode(10 /* PWD */, OUTPUT);
     digitalWrite(10 /* PWD */, HIGH);
   #endif
 
+#ifndef ESP32DIS08070H
   // Init Display
   if (!gfx->begin())
   {
@@ -201,10 +206,18 @@ void setup()
     {}
   }
   gfx->fillScreen(RGB565_BLACK);
+#else
+  Serial.println("gfx->begin");
+  gfx->begin();
+  gfx->setRotation(1);
+//  gfx->fillScreen(TFT_BLACK);
+  Serial.println("gfx->fillScreen");
+#endif
 
   initTouch();
 
   lv_init();
+
 
   #ifdef DIRECT_MODE
     bufSize = SCREEN_WIDTH * SCREEN_HEIGHT;
@@ -364,6 +377,7 @@ void setup()
 * Set TFT Backlight Brightness - can be changed in the Relevant Display Driver
 ******************************************************************************************************************
 */
+
     setBacklight(brightness);
   }
   Serial.println("Setup Done!");
@@ -375,8 +389,9 @@ void setup()
 */
 void loop() 
 {
+Serial.println("Loop 1");
   lv_timer_handler();
-
+Serial.println("Loop 2");
 //  ui_tick();
 
 //  gfx->flush();
