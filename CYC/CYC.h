@@ -22,10 +22,10 @@
 #include <Arduino.h>
 #include <lvgl.h>
 #include <WiFi.h>
-#ifndef ESP32DIS08070H
+#ifndef ESP32DIS02170A
 #include <Arduino_GFX_Library.h>
-#else
-#include <LovyanGFX.hpp>
+//#else
+//#include <LovyanGFX.hpp>
 //#include <Adafruit_GFX.h>
 #endif
 
@@ -136,6 +136,12 @@ WiFiClient client;
   #include "src/8048/actions.h"
   #include "src/8048/images.h"
   #include "DisplayDrivers/ESP32_DIS08070H.h"
+#elif defined ESP32DIS02170A
+  #include "src/8048/ui.h"
+  #include "src/8048/screens.h"
+  #include "src/8048/actions.h"
+  #include "src/8048/images.h"
+  #include "DisplayDrivers/ESP32_DIS02170A.h"
 #endif
 
 // other includes for platformio RKS 27/05/2025
