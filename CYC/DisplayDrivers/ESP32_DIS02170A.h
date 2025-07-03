@@ -1,8 +1,32 @@
+#ifndef ESP32_DIS02170A_H
+#define ESP32_DIS02170A_H
+
+/*******************************************************************************
+ * Start of LovyanGFX setting
+ ******************************************************************************/
+
+#define GFX_BL 2 // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
+#define ROTATION 1
+#define SCREEN_WIDTH 480          //Using EEZ Orientation
+#define SCREEN_HEIGHT 800
+#define DISPLAY_WIDTH 800         //Physical Display Properties ex rotation
+#define DISPLAY_HEIGHT 480
+#define AUTO_FLUSH true
+
+#define NAME_COL_WIDTH 360
+
+#define TFT_BACKLIGHT 230
+
+//#define GFX_DEV_DEVICE ESP32_8048W550
+#define RGB_PANEL
+
+#define TFT_BL 2
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 #include <driver/i2c.h>
+
 
 class LGFX : public lgfx::LGFX_Device {
 public:
@@ -100,3 +124,65 @@ public:
     setPanel(&_panel_instance);
   }
 };
+
+
+LGFX *gfx = new LGFX();
+
+
+/*******************************************************************************
+ * Capacitive Touch
+ ******************************************************************************/
+
+#include <TAMC_GT911.h>
+
+#define TOUCH_GT911_SCL 20
+#define TOUCH_GT911_SDA 19
+#define TOUCH_GT911_INT -1
+#define TOUCH_GT911_RST 38
+
+#define TOUCH_GT911_ROTATION ROTATION_NORMAL
+#define TOUCH_MAP_X1 0
+#define TOUCH_MAP_X2 480
+#define TOUCH_MAP_Y1 800
+#define TOUCH_MAP_Y2 0
+
+int touch_last_x = 0, touch_last_y = 0;
+
+//TAMC_GT911 ts = TAMC_GT911(TOUCH_GT911_SDA, TOUCH_GT911_SCL, TOUCH_GT911_INT, TOUCH_GT911_RST, max(TOUCH_MAP_X1, TOUCH_MAP_X2), max(TOUCH_MAP_Y1, TOUCH_MAP_Y2));
+
+//Initialize the Touch Controller
+void initTouch()
+{
+//  ts.begin();
+//  ts.setRotation(ROTATION);
+}
+
+void my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data)
+{
+/*
+  ts.read();
+  if (ts.isTouched) 
+  {
+  //  TP_Point p = ts.getPoint();
+    data->state = LV_INDEV_STATE_PR;
+//    #if defined(TOUCH_SWAP_XY)
+      touch_last_x = map(ts.points[0].y, TOUCH_MAP_X1, TOUCH_MAP_X2, 0, DISPLAY_HEIGHT - 1);
+      touch_last_y = map(ts.points[0].x, TOUCH_MAP_Y1, TOUCH_MAP_Y2, 0, DISPLAY_WIDTH - 1);
+//    #else
+//      touch_last_x = map(ts.points[0].x, TOUCH_MAP_X1, TOUCH_MAP_X2, DISPLAY_HEIGHT - 1, 0);
+//      touch_last_y = map(ts.points[0].y, TOUCH_MAP_Y1, TOUCH_MAP_Y2, DISPLAY_WIDTH - 1, 0);
+//    #endif
+    data->point.x = touch_last_x;
+    data->point.y = touch_last_y;
+    Serial.println(data->point.x);
+    Serial.println(data->point.y);
+    Serial.println();
+
+    delay(100);
+  }  
+*/
+}
+
+
+
+#endif // ESP32_DIS02170A_H

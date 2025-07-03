@@ -1,5 +1,5 @@
-#ifndef ESP32_JC8048W550C_H
-#define ESP32_JC8048W550C_H
+#ifndef ESP32_DIS08070H_H
+#define ESP32_DIS08070H_H
 
 /*******************************************************************************
  * Start of LovyanGFX setting

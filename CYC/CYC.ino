@@ -200,7 +200,11 @@ void setup()
     while(1)
     {}
   }
+#ifndef ESP32DIS02170A
   gfx->fillScreen(RGB565_BLACK);
+#else
+  gfx->fillScreen(TFT_BLACK);
+#endif
 
   initTouch();
 
