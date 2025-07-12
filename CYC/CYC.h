@@ -141,7 +141,8 @@ WiFiClient client;
   #include "src/8048/screens.h"
   #include "src/8048/actions.h"
   #include "src/8048/images.h"
-  #include "DisplayDrivers/ESP32_DIS02170A.h"
+//  #include "DisplayDrivers/ESP32_DIS02170A.h"
+  #include "DisplayDrivers/Elecrow_DIS02170A_portrait_C.h"
 #endif
 
 // other includes for platformio RKS 27/05/2025
