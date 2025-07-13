@@ -21,7 +21,6 @@
 #include <TCA9534.h>
 TCA9534 ioex;
 
-uint16_t touch_x, touch_y;
 
 //#include <Adafruit_SSD1306.h>
 //#include <Adafruit_GFX.h>
@@ -37,10 +36,8 @@ uint16_t touch_x, touch_y;
 /*
 #define GFX_BL 2 // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
 #define ROTATION 1
-*/
 #define SCREEN_WIDTH 480          //Using EEZ Orientation
 #define SCREEN_HEIGHT 800
-/*
 #define DISPLAY_WIDTH 800         //Physical Display Properties ex rotation
 #define DISPLAY_HEIGHT 480
 */
@@ -116,9 +113,9 @@ public:
       cfg.pin_hsync = GPIO_NUM_40;
       cfg.pin_pclk = GPIO_NUM_39;
 //      cfg.freq_write = 21000000;
-//        cfg.freq_write = 16000000;
+        cfg.freq_write = 16000000;
 //      cfg.freq_write = 13990000;
-      cfg.freq_write = 14000000;
+//      cfg.freq_write = 14000000;
 
       cfg.hsync_polarity = 0;
       cfg.hsync_front_porch = 8;
@@ -173,7 +170,6 @@ public:
 
 
 LGFX gfx;
-//LGFX *gfx = new(LGFX);
 
 
 // Version 1.2 updated the control of backlight on the basis of the original, the backlight of version 1.2 is controlled by STC8H1K28 microcontroller,
@@ -223,25 +219,6 @@ void init_Hardware()
     // end
   }
 
- }
-
-//  Read touch
-void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
- {
-  data->state = LV_INDEV_STATE_REL;// The state of data existence when releasing the finger
-  bool touched = gfx.getTouch( &touch_x, &touch_y );
-  if (touched)
-  {
-    data->state = LV_INDEV_STATE_PR;
-
-    //  Set coordinates
-    data->point.x = touch_x;
-    data->point.y = touch_y;
-//    Serial.print("x = ");
-//    Serial.println(touch_x);
-//    Serial.print("y = ");
-//    Serial.println(touch_y);
-  }
  }
 
  #endif // ESP32_DIS02170A_PORTRAIT_C_H

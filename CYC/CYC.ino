@@ -75,6 +75,7 @@
  * 
  *  For platformio these are handled in platformio.ini
 */
+#ifndef ELECROW
 
 #ifndef PLATFORMIO_BUILD
 //#define ESP2432S028R           // Sunton ESP32-2432S028R Classic CYD  ESP32     tick 
@@ -465,3 +466,5 @@ void loop()
 
   receiveCMD();
 }
+
+#endif // ELECROW
