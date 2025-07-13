@@ -103,11 +103,22 @@
 
 #include "CYC.h"
 
+#ifndef ESP32DIS02170A
 uint32_t bufSize;
 
 lv_disp_draw_buf_t draw_buf;
 lv_color_t *disp_draw_buf;
 lv_disp_drv_t disp_drv;
+
+uint16_t touch_x, touch_y;
+#else
+static lv_disp_draw_buf_t draw_buf;
+static lv_color_t *buf;
+static lv_color_t *buf1;
+
+#endif
+
+
 
 File file;
 
@@ -154,12 +165,13 @@ void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* 
     uint32_t w = ( area->x2 - area->x1 + 1 );
     uint32_t h = ( area->y2 - area->y1 + 1 );
 
-    #if ( LV_COLOR_16_SWAP != 0 ) 
+#ifndef ESP32DIS02170A
+    #if ( LV_COLOR_16_SWAP != 0 )
       gfx->draw16bitBeRGBBitmap( area->x1, area->y1, ( uint16_t* )&color_p->full, w, h );
     #else
        gfx->draw16bitRGBBitmap( area->x1, area->y1, ( uint16_t* )&color_p->full, w, h );
     #endif
-//  #endif
+#endif
   lv_disp_flush_ready( disp_drv );
 }
 /*
@@ -167,6 +179,7 @@ void my_disp_flush( lv_disp_drv_t* disp_drv, const lv_area_t* area, lv_color_t* 
  * Backlight Brightness Control
  ********************************************************************************************************
 */
+#ifndef ESP32DIS02170A
 void setBacklight(uint8_t brightness)
 {
 
@@ -179,6 +192,7 @@ void setBacklight(uint8_t brightness)
 //  ledcWrite(GFX_BL, brightness);                  //If using ESP Boards 3.x Pin, Brightness
 //#endif
 }
+#endif
 /*
  ********************************************************************************************************
  * Setup
@@ -194,6 +208,7 @@ void setup()
   #endif
 
   // Init Display
+#ifndef ESP32DIS02170A
   if (!gfx->begin())
   {
     Serial.println("gfx->begin() failed!");
@@ -203,7 +218,6 @@ void setup()
   gfx->fillScreen(RGB565_BLACK);
 
   initTouch();
-
   lv_init();
 
   #ifdef DIRECT_MODE
@@ -214,7 +228,12 @@ void setup()
 
   #ifdef ESP32
     #if defined(DIRECT_MODE) && (defined(CANVAS) || defined(RGB_PANEL) || defined(DSI_PANEL))
+#ifndef ESP32DIS02170A
       disp_draw_buf = (lv_color_t *)gfx->getFramebuffer();
+#else
+      disp_draw_buf = (lv_color_t *)gfx.getFramebuffer();
+#endif
+
     #else  // !(defined(DIRECT_MODE) && (defined(CANVAS) || defined(RGB_PANEL) || defined(DSI_PANEL)))
     disp_draw_buf = (lv_color_t *)heap_caps_malloc(bufSize * 2, MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
     if (!disp_draw_buf)
@@ -250,8 +269,66 @@ void setup()
     static lv_indev_drv_t indev_drv;
     lv_indev_drv_init( &indev_drv );
     indev_drv.type = LV_INDEV_TYPE_POINTER;
+#ifndef ESP32DIS02170A
     indev_drv.read_cb = my_touchpad_read;
+#endif
     lv_indev_drv_register( &indev_drv );
+
+
+#else
+  if (!gfx.init())
+  {
+    Serial.println("gfx.init() failed!");
+    while(1)
+    {}
+  }
+
+  gfx.initDMA();
+
+  gfx.setRotation(1);
+
+  gfx.startWrite();
+  gfx.fillScreen(TFT_BLACK);
+
+  gfx.fillScreen(TFT_BLUE);
+  delay(1000);
+
+  gfx.setTextColor(TFT_WHITE, TFT_BLUE);
+  gfx.setTextSize(4);
+  gfx.drawString("Wifi Throttle", 80, 200);
+  delay(1000);
+ 
+  init_Hardware();
+
+  lv_init();
+  // size_t buffer_size = sizeof(lv_color_t) * LCD_H_RES * LCD_V_RES;
+  size_t buffer_size = sizeof(lv_color_t) * LCD_H_RES * LCD_V_RES * 4;
+  buf = (lv_color_t *)heap_caps_malloc(buffer_size, MALLOC_CAP_SPIRAM);
+  buf1 = (lv_color_t *)heap_caps_malloc(buffer_size, MALLOC_CAP_SPIRAM);
+
+  lv_disp_draw_buf_init(&draw_buf, buf, buf1, LCD_H_RES * LCD_V_RES);
+
+  // Initialize display
+  static lv_disp_drv_t disp_drv;
+  lv_disp_drv_init(&disp_drv);
+  // Change the following lines to your display resolution
+  disp_drv.hor_res = LCD_H_RES;
+  disp_drv.ver_res = LCD_V_RES;
+  disp_drv.flush_cb = my_disp_flush;
+  disp_drv.draw_buf = &draw_buf;
+  lv_disp_drv_register(&disp_drv);
+
+  // Initialize input device driver program
+  static lv_indev_drv_t indev_drv;
+  lv_indev_drv_init(&indev_drv);
+  indev_drv.type = LV_INDEV_TYPE_POINTER;
+  indev_drv.read_cb = my_touchpad_read;
+  lv_indev_drv_register(&indev_drv);
+
+  delay(100);
+  gfx.fillScreen(TFT_BLACK);
+
+#endif
 
     // Init EEZ-Studio UI
     ui_init();
@@ -359,14 +436,19 @@ void setup()
     rosterMode = GUEST_INACTIVE;
 
     lv_table_set_col_width(objects.tbl_roster, 0, NAME_COL_WIDTH);
+
 /*
 ******************************************************************************************************************
 * Set TFT Backlight Brightness - can be changed in the Relevant Display Driver
 ******************************************************************************************************************
 */
-    setBacklight(brightness);
+  setBacklight(brightness);
+
+#ifndef ESP32DIS02170A
   }
-  Serial.println("Setup Done!");
+#endif
+
+Serial.println("Setup Done!");
 }
 /*
  ********************************************************************************************************
