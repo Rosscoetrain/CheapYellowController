@@ -155,8 +155,10 @@ LGFX gfx;
 
 void setBacklight(uint8_t brightness)
  {
+  uint8_t b = 0x06 + (brightness / 55);
+//  Serial.print("brightness : "); Serial.println(b, HEX);
   Wire.beginTransmission(0x30);
-  Wire.write(0x10);          // maximum brightness
+  Wire.write(b);          // maximum brightness
   Wire.endTransmission();
  }
 
