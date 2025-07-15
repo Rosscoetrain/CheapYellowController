@@ -176,7 +176,7 @@ void action_throttle_button(lv_event_t * e)
       {
         lv_btnmatrix_set_btn_ctrl(objects.function_mtx, func_xlate[i], LV_BTNMATRIX_CTRL_HIDDEN);        
       }
-#ifndef ESP32DIS02170A
+#ifndef ELECROW
       gfx->flush(true);
 #else
       gfx.flush();

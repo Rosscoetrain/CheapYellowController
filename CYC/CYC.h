@@ -22,15 +22,12 @@
 #include <Arduino.h>
 #include <lvgl.h>
 #include <WiFi.h>
-#ifndef ESP32DIS02170A
+#ifndef ELECROW
 #include <Arduino_GFX_Library.h>
-//#else
-//#include <LovyanGFX.hpp>
-//#include <Adafruit_GFX.h>
 #endif
 
 #include <EEPROM.h>
-//#include <DCCEXProtocol.h>
+#include <DCCEXProtocol.h>
 #include <LittleFS.h>
 #include <CSV_Parser.h>
 
@@ -135,14 +132,25 @@ WiFiClient client;
   #include "src/8048/screens.h"
   #include "src/8048/actions.h"
   #include "src/8048/images.h"
-  #include "DisplayDrivers/ESP32_DIS08070H.h"
+  #include "DisplayDrivers/Elecrow_DIS08070H_portrait_C.h"
+#elif defined ESP32DIS08070H_LS
+  #include "src/8048_landscape/ui.h"
+  #include "src/8048_landscape/screens.h"
+  #include "src/8048_landscape/actions.h"
+  #include "src/8048_landscape/images.h"
+  #include "DisplayDrivers/Elecrow_DIS08070H_landscape_C.h"
 #elif defined ESP32DIS02170A
   #include "src/8048/ui.h"
   #include "src/8048/screens.h"
   #include "src/8048/actions.h"
   #include "src/8048/images.h"
-//  #include "DisplayDrivers/ESP32_DIS02170A.h"
   #include "DisplayDrivers/Elecrow_DIS02170A_portrait_C.h"
+#elif defined ESP32DIS02170A_LS
+  #include "src/8048_landscape/ui.h"
+  #include "src/8048_landscape/screens.h"
+  #include "src/8048_landscape/actions.h"
+  #include "src/8048_landscape/images.h"
+  #include "DisplayDrivers/Elecrow_DIS02170A_landscape_C.h"
 #endif
 
 // other includes for platformio RKS 27/05/2025
@@ -349,6 +357,7 @@ HCRoute hcRoute[NUM_ROUTES];
  * Global Variables
  ****************************************************************************************************************
 */
+/*
 uint16_t map_xlate[] = {0, 3, 6, 9, 12, 1, 4, 7, 10, 13};
 uint16_t func_xlate[] = {0, 2, 4, 6, 8, 1, 3, 5, 7, 9};
 uint16_t abs_xlate[] = {0, 5, 1, 6, 2, 7, 3, 8, 4, 9};
@@ -360,7 +369,7 @@ const char * btnMap_functions[] = {
                           " ", " ", "\n",
                           " ", " ", NULL
                           };
-
+*/
 /*
 const char * funcMap_functions[] = {
                           " ", " ", "\n",
@@ -370,6 +379,31 @@ const char * funcMap_functions[] = {
                           " ", " ", NULL
                           };
 */
+
+#if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
+// || defined ESP32DIS06043H
+uint16_t map_xlate[] = {0, 3, 6, 9, 12, 1, 4, 7, 10, 13};
+uint16_t func_xlate[] = {0, 2, 4, 6, 8, 1, 3, 5, 7, 9};
+uint16_t abs_xlate[] = {0, 5, 1, 6, 2, 7, 3, 8, 4, 9};
+const char * btnMap_functions[] = {
+                          " ", " ", "\n",
+                          " ", " ", "\n",
+                          " ", " ", "\n",
+                          " ", " ", "\n",
+                          " ", " ", NULL
+                          };
+#else
+uint16_t map_xlate[] = {0, 1, 2, 3, 4, 6, 7, 8, 9, 10};  // this is the order in the map on screen, bottom row first 5 is missing as it's the "\n"
+uint16_t func_xlate[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};  // this is the order that the functions slots will be in the map
+uint16_t abs_xlate[] =  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+  const char * btnMap_functions[] = {
+    " ", " ", " ", " ", " ", "\n",
+    " ", " ", " ", " ", " ", NULL
+  };
+#endif
+
+
 
 uint32_t activeIndex = 0;
 uint32_t activeSlot[THROTTLE_COUNT] = {0};

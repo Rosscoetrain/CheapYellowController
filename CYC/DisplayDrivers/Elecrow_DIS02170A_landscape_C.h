@@ -1,13 +1,13 @@
 /*
  *
- * @file Elecrow_DIS02170A_portrait_C.h
+ * @file Elecrow_DIS02170A_landscape_C.h
  * 
  * 
  *
  */
 
-#ifndef ELECROW_DIS02170A_PORTRAIT_C_H
-#define ELECROW_DIS02170A_PORTRAIT_C_H
+#ifndef ESP32_DIS02170A_LANDSCAPE_C_H
+#define ESP32_DIS02170A_LANDSCAPE_C_H
 
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
@@ -21,18 +21,14 @@
 #include <TCA9534.h>
 TCA9534 ioex;
 
-
-//#include <Adafruit_SSD1306.h>
-//#include <Adafruit_GFX.h>
-
-#define LCD_H_RES 480
-#define LCD_V_RES 800
+#define LCD_H_RES 800
+#define LCD_V_RES 480
 
 /*
 #define GFX_BL 2 // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
 #define ROTATION 1
-#define SCREEN_WIDTH 480          //Using EEZ Orientation
-#define SCREEN_HEIGHT 800
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 480
 #define DISPLAY_WIDTH 800         //Physical Display Properties ex rotation
 #define DISPLAY_HEIGHT 480
 */
@@ -123,16 +119,17 @@ public:
 
     {
       auto cfg = _touch_instance.config();
-      cfg.x_min = 800;
-      cfg.x_max = 0;
-      cfg.y_min = 480;
-      cfg.y_max = 0;
-      cfg.offset_rotation = 2;
+      cfg.x_min = 0;
+      cfg.x_max = 800;
+      cfg.y_min = 0;
+      cfg.y_max = 480;
+      cfg.offset_rotation = 0;
 
       cfg.pin_int = -1;
       cfg.bus_shared = false;
 //      cfg.offset_rotation = 0;
 //      cfg.offset_rotation = 1;
+//      cfg.offset_rotation = 2;
 //      cfg.offset_rotation = 3;
       cfg.i2c_port = I2C_NUM_0;
       cfg.pin_sda = GPIO_NUM_15;
@@ -201,28 +198,5 @@ void init_Hardware()
 
  }
 
-/*
- //create a touch object
-void my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data)
-{
-
-  if (ts.pressed()) 
-  {
-    data->state = LV_INDEV_STATE_PR;
-//    data->point.x = ts.X(); //map(p.x, touch_map_x1, touch_map_x2, 1, SCREEN_WIDTH);
-//    data->point.y = ts.Y(); //map(p.y, touch_map_y1, touch_map_y2, 1, SCREEN_HEIGHT);
-
-    data->point.x = map(ts.RawY(), touch_map_x1, touch_map_x2, 1, SCREEN_WIDTH);
-    data->point.y = map(ts.RawX(), touch_map_y1, touch_map_y2, 1, SCREEN_HEIGHT);
- //   Serial.printf("RawX: %d X: %d - RawY: %d Y: %d\n", ts.RawX(), data->point.x, ts.RawY(), data->point.y );
-  }
-  else
-  {
-    data->state = LV_INDEV_STATE_REL;
-  }
-
-}
-*/
-
- #endif // ELECROW_DIS02170A_PORTRAIT_C_H
+ #endif // ESP32_DIS02170A_LANDSCAPE_C_H
  
