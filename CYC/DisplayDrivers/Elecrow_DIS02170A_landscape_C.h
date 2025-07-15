@@ -155,7 +155,9 @@ LGFX gfx;
 
 void setBacklight(uint8_t brightness)
  {
-   
+  Wire.beginTransmission(0x30);
+  Wire.write(0x10);          // maximum brightness
+  Wire.endTransmission();
  }
 
 bool i2cScanForAddress(uint8_t address)

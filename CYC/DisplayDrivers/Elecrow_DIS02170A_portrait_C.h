@@ -158,7 +158,11 @@ LGFX gfx;
 
 void setBacklight(uint8_t brightness)
  {
-   
+  uint8_t b = 0x06 + (brightness / 55);
+//  Serial.print("brightness : "); Serial.println(b, HEX);
+  Wire.beginTransmission(0x30);
+  Wire.write(b);          // maximum brightness
+  Wire.endTransmission();
  }
 
 bool i2cScanForAddress(uint8_t address)
@@ -194,7 +198,7 @@ void init_Hardware()
 
     delay(20);
     ioex.output(2, TCA9534::Level::H);
-   delay(100);
+    delay(100);
     pinMode(1, INPUT);
     // end
   }
