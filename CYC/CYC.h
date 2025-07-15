@@ -252,7 +252,9 @@ typedef enum {
 } Network_Status_t;
 
 Network_Status_t networkStatus = NO_NETWORK;
- typedef enum {
+
+#if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
+typedef enum {
   CONFIG,
   ROSTER,
   ACC,
@@ -262,6 +264,16 @@ Network_Status_t networkStatus = NO_NETWORK;
   SAVE,
   RESTORE
  }Menu_Items;
+#else
+typedef enum {
+  ROSTER = 0,
+  ACC = 1,
+  ROUTES = 2,
+  PROGRAM = 3,
+  CONFIG = 4,
+  WIFI = 5,
+ }Menu_Items;
+ #endif
 
 /*
  ****************************************************************************************************************

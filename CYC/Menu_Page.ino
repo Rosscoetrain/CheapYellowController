@@ -63,12 +63,14 @@ static void menu_cb(lv_event_t * e)
       case ROUTES:
 //        loadScreen(SCREEN_ID_ROUTES);  
         break;
+#if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
       case SAVE:
         saveLittleFS();
         break;
       case RESTORE:
         restoreLittleFS();
         break;
+#endif
       default:
         break;
     }
@@ -91,6 +93,14 @@ void action_menu_button(lv_event_t * e)
       case 32:       //Info
         loadScreen(SCREEN_ID_INFO);  
         break;
+#if defined ESP32DIS02170A_LS || defined ESP32DIS08070H_LS
+      case 28:
+        saveLittleFS();
+        break;
+      case 29:
+        restoreLittleFS();
+        break;
+#endif
       default:       //Stray
         break;
     }
