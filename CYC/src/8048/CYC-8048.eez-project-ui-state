@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/11",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/2",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -197,10 +197,10 @@
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "EditAcc",
+                  "name": "Roster",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/11",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/2",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -1472,8 +1472,7 @@
           "2": {},
           "8": {},
           "21": {}
-        },
-        "$selected": true
+        }
       },
       "transform": {
         "translate": {

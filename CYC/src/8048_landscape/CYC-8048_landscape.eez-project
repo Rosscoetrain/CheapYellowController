@@ -1800,7 +1800,7 @@
             {
               "objID": "d15f80dd-b3e0-47dd-a12f-45106c462bf9",
               "type": "LVGLButtonWidget",
-              "left": 637,
+              "left": 635,
               "top": 14,
               "width": 145,
               "height": 80,
@@ -1927,7 +1927,7 @@
             {
               "objID": "bfe23f06-7a82-49f1-e7bb-ab4624d1c557",
               "type": "LVGLButtonWidget",
-              "left": 637,
+              "left": 635,
               "top": 108,
               "width": 145,
               "height": 80,
@@ -2054,7 +2054,7 @@
             {
               "objID": "bb43af97-c471-4887-cfe4-d9596ba2a0b4",
               "type": "LVGLButtonWidget",
-              "left": 637,
+              "left": 635,
               "top": 200,
               "width": 145,
               "height": 80,
@@ -4974,8 +4974,8 @@
             {
               "objID": "9dd22cd9-d8d2-4423-a28c-90778a542014",
               "type": "LVGLButtonWidget",
-              "left": 602,
-              "top": 256,
+              "left": 635,
+              "top": 211,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -5099,8 +5099,8 @@
             {
               "objID": "b1c5064e-445a-42fe-9b62-d66a1b5d3a4c",
               "type": "LVGLButtonWidget",
-              "left": 602,
-              "top": 152,
+              "left": 635,
+              "top": 120,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -5231,8 +5231,8 @@
             {
               "objID": "023ef740-ec16-473b-c2bd-0b90e36f7118",
               "type": "LVGLButtonWidget",
-              "left": 602,
-              "top": 54,
+              "left": 635,
+              "top": 29,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -5516,8 +5516,8 @@
             {
               "objID": "560545b3-ff94-421d-daf2-051c735f3420",
               "type": "LVGLButtonWidget",
-              "left": 632,
-              "top": 215,
+              "left": 635,
+              "top": 211,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -5642,7 +5642,7 @@
             {
               "objID": "38bf89da-56c9-4c9f-a5bc-62a7c14a34fc",
               "type": "LVGLButtonWidget",
-              "left": 632,
+              "left": 635,
               "top": 120,
               "width": 145,
               "height": 80,
@@ -5768,7 +5768,7 @@
             {
               "objID": "a3ca612d-927e-40e4-87fb-9a3b22c882d2",
               "type": "LVGLButtonWidget",
-              "left": 632,
+              "left": 635,
               "top": 29,
               "width": 145,
               "height": 80,
@@ -8404,8 +8404,8 @@
             {
               "objID": "a2f23724-25c0-402d-ada4-a5f50e46f1ec",
               "type": "LVGLKeyboardWidget",
-              "left": 299,
-              "top": 150,
+              "left": 285,
+              "top": 135,
               "width": 478,
               "height": 320,
               "customInputs": [],
@@ -8565,8 +8565,8 @@
             {
               "objID": "7e8e0180-0bce-4ae2-bdfa-4ab24b2f3cc8",
               "type": "LVGLButtonWidget",
-              "left": 624,
-              "top": 133,
+              "left": 635,
+              "top": 120,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -8691,7 +8691,7 @@
             {
               "objID": "9ea8c5d4-566b-4331-c5a5-0a830f39ff57",
               "type": "LVGLButtonWidget",
-              "left": 624,
+              "left": 635,
               "top": 29,
               "width": 145,
               "height": 80,
@@ -10142,7 +10142,7 @@
             {
               "objID": "2896f302-3878-4fb2-9eba-bbfa4512a778",
               "type": "LVGLButtonWidget",
-              "left": 631,
+              "left": 635,
               "top": 211,
               "width": 145,
               "height": 80,
@@ -10269,7 +10269,7 @@
             {
               "objID": "3d3c3325-019a-47e2-a1f6-f6b6bd89c67d",
               "type": "LVGLButtonWidget",
-              "left": 631,
+              "left": 635,
               "top": 120,
               "width": 145,
               "height": 80,
@@ -10397,7 +10397,7 @@
             {
               "objID": "fe347e17-944b-4629-d9a9-0389c2ccb51a",
               "type": "LVGLButtonWidget",
-              "left": 631,
+              "left": 635,
               "top": 29,
               "width": 145,
               "height": 80,
@@ -14309,8 +14309,8 @@
               "type": "LVGLLabelWidget",
               "left": 11,
               "top": 108,
-              "width": 769,
-              "height": 351,
+              "width": 754,
+              "height": 324,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -14348,7 +14348,7 @@
               },
               "group": "",
               "groupIndex": 0,
-              "text": "Tools Used and References\nEEZ Studio Version 0.23.2\n(https://www.envox.eu)\nPlatformio ESP32 Boards Version 2.0.17,\nlvgl Version 8.4, LovyanGFX 1.2.0\nWhilst everything here is \"Open Source\", I request you respect the originality of everyone's work and give credit where you think it's due:-)\n(c) Norman Halland (normhal) normhal@gmail.com\nhttps://github.com/normhal/CYC\n(c) Ross Scanlon (Rosscoe) iam@rosscoe.com\nhttps://github.com/Rosscoetrain/Crowpanel_CYC_Throttle\nVersion 1.1.0 07 July 2025",
+              "text": "Tools Used and References\nEEZ Studio Version 0.23.2\n(https://www.envox.eu)\nPlatformio ESP32 Boards Version 2.0.17,\nlvgl Version 8.4, LovyanGFX 1.2.0\nWhilst everything here is \"Open Source\", I request you respect the originality of everyone's work and give credit where you think it's due:-)\n(c) Norman Halland (normhal) normhal@gmail.com\nhttps://github.com/normhal/CYC\n(c) Ross Scanlon (Rosscoe) iam@rosscoe.com\nVersion 1.1.0 07 July 2025",
               "textType": "literal",
               "longMode": "WRAP",
               "recolor": false
@@ -16773,8 +16773,8 @@
                   "type": "LVGLLabelWidget",
                   "left": 0,
                   "top": 0,
-                  "width": 69,
-                  "height": 22,
+                  "width": 83,
+                  "height": 27,
                   "customInputs": [],
                   "customOutputs": [],
                   "style": {
@@ -16808,7 +16808,7 @@
                           "bg_grad_dir": "VER",
                           "bg_grad_color": "#000000",
                           "bg_grad_stop": 255,
-                          "text_font": "MONTSERRAT_20"
+                          "text_font": "MONTSERRAT_24"
                         }
                       }
                     }
@@ -16893,8 +16893,8 @@
                   "type": "LVGLLabelWidget",
                   "left": 0,
                   "top": 0,
-                  "width": 56,
-                  "height": 22,
+                  "width": 66,
+                  "height": 27,
                   "customInputs": [],
                   "customOutputs": [],
                   "style": {
@@ -16928,7 +16928,7 @@
                           "bg_grad_dir": "VER",
                           "bg_grad_color": "#000000",
                           "bg_grad_stop": 255,
-                          "text_font": "MONTSERRAT_20"
+                          "text_font": "MONTSERRAT_24"
                         }
                       }
                     }
@@ -17013,8 +17013,8 @@
                   "type": "LVGLLabelWidget",
                   "left": 0,
                   "top": 0,
-                  "width": 61,
-                  "height": 22,
+                  "width": 73,
+                  "height": 27,
                   "customInputs": [],
                   "customOutputs": [],
                   "style": {
@@ -17049,7 +17049,7 @@
                           "bg_grad_dir": "VER",
                           "bg_grad_color": "#000000",
                           "bg_grad_stop": 255,
-                          "text_font": "MONTSERRAT_20"
+                          "text_font": "MONTSERRAT_24"
                         }
                       }
                     }

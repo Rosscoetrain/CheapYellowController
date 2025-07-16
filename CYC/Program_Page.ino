@@ -127,7 +127,7 @@ static void cv_cb(lv_event_t * e)
   if(code == LV_EVENT_VALUE_CHANGED) 
   {
     lv_obj_add_state(objects.ta_cvn, LV_STATE_DISABLED);
-    char *cvNum[6] = {"2", "6", "5", "3", "4", ""};
+    const char *cvNum[6] = {"2", "6", "5", "3", "4", ""};
     uint32_t id = lv_btnmatrix_get_selected_btn(objects.cv_mtx);    //Retrieve the Selected Throttle number
     lv_textarea_set_text(objects.ta_cvn, cvNum[id]);
     if(cvNum[id] == "") lv_obj_clear_state(objects.ta_cvn, LV_STATE_DISABLED);

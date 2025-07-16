@@ -881,7 +881,7 @@ void create_screen_throttle() {
             // CreditsButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.credits_button_1 = obj;
-            lv_obj_set_pos(obj, 637, 14);
+            lv_obj_set_pos(obj, 635, 14);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -925,7 +925,7 @@ void create_screen_throttle() {
             // TipsButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.tips_button_1 = obj;
-            lv_obj_set_pos(obj, 637, 108);
+            lv_obj_set_pos(obj, 635, 108);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)31);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -969,7 +969,7 @@ void create_screen_throttle() {
             // InfoButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.info_button_1 = obj;
-            lv_obj_set_pos(obj, 637, 200);
+            lv_obj_set_pos(obj, 635, 200);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)32);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -1937,7 +1937,7 @@ void create_screen_roster() {
             // btnCancelEditLoco
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.btn_cancel_edit_loco = obj;
-            lv_obj_set_pos(obj, 602, 256);
+            lv_obj_set_pos(obj, 635, 211);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_roster_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -1979,7 +1979,7 @@ void create_screen_roster() {
             // btnEditLoco
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.btn_edit_loco = obj;
-            lv_obj_set_pos(obj, 602, 152);
+            lv_obj_set_pos(obj, 635, 120);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, event_handler_checked_cb_roster_btn_edit_loco, LV_EVENT_VALUE_CHANGED, (void *)31);
             lv_obj_add_event_cb(obj, event_handler_unchecked_cb_roster_btn_edit_loco, LV_EVENT_VALUE_CHANGED, (void *)28);
@@ -2023,7 +2023,7 @@ void create_screen_roster() {
             // btnSelectLoco
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.btn_select_loco = obj;
-            lv_obj_set_pos(obj, 602, 54);
+            lv_obj_set_pos(obj, 635, 29);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, event_handler_checked_cb_roster_btn_select_loco, LV_EVENT_VALUE_CHANGED, (void *)32);
             lv_obj_add_event_cb(obj, event_handler_unchecked_cb_roster_btn_select_loco, LV_EVENT_VALUE_CHANGED, (void *)29);
@@ -2102,7 +2102,7 @@ void create_screen_edit_loco() {
             // CreditsButton_3
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.credits_button_3 = obj;
-            lv_obj_set_pos(obj, 632, 215);
+            lv_obj_set_pos(obj, 635, 211);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_edit_loco_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -2145,7 +2145,7 @@ void create_screen_edit_loco() {
             // TipsButton_3
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.tips_button_3 = obj;
-            lv_obj_set_pos(obj, 632, 120);
+            lv_obj_set_pos(obj, 635, 120);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_edit_loco_button, LV_EVENT_RELEASED, (void *)31);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -2188,7 +2188,7 @@ void create_screen_edit_loco() {
             // InfoButton_3
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.info_button_3 = obj;
-            lv_obj_set_pos(obj, 632, 29);
+            lv_obj_set_pos(obj, 635, 29);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_edit_loco_button, LV_EVENT_RELEASED, (void *)32);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -3033,7 +3033,7 @@ void create_screen_edit_loco() {
             // aKbdEditLoco
             lv_obj_t *obj = lv_keyboard_create(parent_obj);
             objects.a_kbd_edit_loco = obj;
-            lv_obj_set_pos(obj, 299, 150);
+            lv_obj_set_pos(obj, 285, 135);
             lv_obj_set_size(obj, 478, 320);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
             lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -3072,7 +3072,7 @@ void create_screen_program() {
             // CancelButton_6
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.cancel_button_6 = obj;
-            lv_obj_set_pos(obj, 624, 133);
+            lv_obj_set_pos(obj, 635, 120);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_program_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -3115,7 +3115,7 @@ void create_screen_program() {
             // DoneButton_6
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.done_button_6 = obj;
-            lv_obj_set_pos(obj, 624, 29);
+            lv_obj_set_pos(obj, 635, 29);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_program_button, LV_EVENT_RELEASED, (void *)32);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -3571,7 +3571,7 @@ void create_screen_wi_fi() {
             // ConfigButton_WiFi
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.config_button_wi_fi = obj;
-            lv_obj_set_pos(obj, 631, 211);
+            lv_obj_set_pos(obj, 635, 211);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_wifi_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -3617,7 +3617,7 @@ void create_screen_wi_fi() {
             // RetryButton_WiFi
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.retry_button_wi_fi = obj;
-            lv_obj_set_pos(obj, 631, 120);
+            lv_obj_set_pos(obj, 635, 120);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_wifi_button, LV_EVENT_RELEASED, (void *)31);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -3664,7 +3664,7 @@ void create_screen_wi_fi() {
             // DoneButton_WiFi
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.done_button_wi_fi = obj;
-            lv_obj_set_pos(obj, 631, 29);
+            lv_obj_set_pos(obj, 635, 29);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_wifi_button, LV_EVENT_RELEASED, (void *)32);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -4772,9 +4772,9 @@ void create_screen_info() {
         {
             lv_obj_t *obj = lv_label_create(parent_obj);
             lv_obj_set_pos(obj, 11, 108);
-            lv_obj_set_size(obj, 769, LV_SIZE_CONTENT);
+            lv_obj_set_size(obj, 754, LV_SIZE_CONTENT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
-            lv_label_set_text(obj, "Tools Used and References\nEEZ Studio Version 0.23.2\n(https://www.envox.eu)\nPlatformio ESP32 Boards Version 2.0.17,\nlvgl Version 8.4, LovyanGFX 1.2.0\nWhilst everything here is \"Open Source\", I request you respect the originality of everyone's work and give credit where you think it's due:-)\n(c) Norman Halland (normhal) normhal@gmail.com\nhttps://github.com/normhal/CYC\n(c) Ross Scanlon (Rosscoe) iam@rosscoe.com\nhttps://github.com/Rosscoetrain/Crowpanel_CYC_Throttle\nVersion 1.1.0 07 July 2025");
+            lv_label_set_text(obj, "Tools Used and References\nEEZ Studio Version 0.23.2\n(https://www.envox.eu)\nPlatformio ESP32 Boards Version 2.0.17,\nlvgl Version 8.4, LovyanGFX 1.2.0\nWhilst everything here is \"Open Source\", I request you respect the originality of everyone's work and give credit where you think it's due:-)\n(c) Norman Halland (normhal) normhal@gmail.com\nhttps://github.com/normhal/CYC\n(c) Ross Scanlon (Rosscoe) iam@rosscoe.com\nVersion 1.1.0 07 July 2025");
         }
     }
     
@@ -5293,7 +5293,7 @@ void create_screen_functions() {
                     lv_obj_set_style_bg_grad_dir(obj, LV_GRAD_DIR_VER, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_stop(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_label_set_text(obj, "Cancel");
                 }
             }
@@ -5334,7 +5334,7 @@ void create_screen_functions() {
                     lv_obj_set_style_bg_grad_dir(obj, LV_GRAD_DIR_VER, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_stop(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_label_set_text(obj, "Done");
                 }
             }
@@ -5376,7 +5376,7 @@ void create_screen_functions() {
                     lv_obj_set_style_bg_grad_dir(obj, LV_GRAD_DIR_VER, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_obj_set_style_bg_grad_stop(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+                    lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
                     lv_label_set_text(obj, "Detail");
                 }
             }
