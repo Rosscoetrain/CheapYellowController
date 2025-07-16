@@ -25,4 +25,4 @@ using namespace eez;
 
 #endif /*EEZ_LVGL_UI_STRUCTS_H*/
 
-#endif //RES8048
+#endif // RES8048

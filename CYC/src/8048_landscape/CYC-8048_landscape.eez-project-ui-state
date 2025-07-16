@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/7",
+    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/10",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -196,10 +196,10 @@
                 {
                   "type": "tab",
                   "id": "#e5705479-239e-4456-983d-50fd172f449a",
-                  "name": "Config",
+                  "name": "Accessories",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/7",
+                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/10",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -1757,14 +1757,16 @@
     },
     "[CYC-8048_landscape.eez-project]:/userPages/10[flow-state]": {
       "selection": {
-        "0": {}
+        "0": {
+          "1": {}
+        }
       },
       "transform": {
         "translate": {
-          "x": -240,
-          "y": -400
+          "x": -560,
+          "y": -376
         },
-        "scale": 0.8
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1782,7 +1784,7 @@
           "x": -240,
           "y": -400
         },
-        "scale": 0.8
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,

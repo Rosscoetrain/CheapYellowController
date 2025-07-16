@@ -279,3 +279,79 @@ void action_throttle_button(lv_event_t * e)
       break;
   }
 }
+
+
+void action_functions_button(lv_event_t * e)
+{
+  void *user_data = lv_event_get_user_data(e);
+  int pressedButton = *((int*)(&user_data));
+  switch(pressedButton)
+  {
+    case 30:    //Cancel Button
+     loadScreen(SCREEN_ID_THROTTLE);
+      break;
+    case 31:    //Description Button
+      break;
+    case 32:    //Done Button
+      loadScreen(SCREEN_ID_THROTTLE);
+      break;
+    default:
+      break;
+  }
+}
+
+
+static void ex_functions_cb(lv_event_t * e)
+{
+  if(rosterMode == GUEST_INACTIVE)
+  {
+    lv_event_code_t code = lv_event_get_code(e);
+    lv_obj_t * obj = lv_event_get_target(e);
+    uint32_t fNum = lv_btnmatrix_get_selected_btn(obj); 
+    if(fNum == 65535) return;
+//    Serial.printf("Button: %d\n", fNum);
+    if(lv_btnmatrix_has_btn_ctrl(obj, fNum, LV_BTNMATRIX_CTRL_DISABLED)) return;
+    if(code == LV_EVENT_PRESSED)
+    {
+      if(lv_obj_get_state(objects.desc_button) == LV_STATE_CHECKED)
+      {
+        Serial.printf("Function Pressed: %d\n", fNum);
+        Serial.printf("Active ID: %d\n", activeLocoID);
+        Serial.println(funcName[activeLocoID][fNum]);
+//        std::string s = std::to_string(fNum);
+//        s = "Function Pressed: F" + s;
+//        const char* fDesc = s.c_str();
+//        lv_label_set_text(objects.func_description, fDesc);
+        lv_label_set_text(objects.func_description, funcName[activeLocoID][fNum]);
+
+
+//        if(funcState[activeLocoID][fslot] == 1) funcState[activeLocoID][fslot] = 0;
+//        else funcState[activeLocoID][fslot] = 1;
+//        //Send the DCCEX Command...
+//        String functionCMD = ("<F " + String(locoAddress[activeLocoID]) + " " + String(atoi(funcNumber[activeLocoID][fslot])) + " " + String(funcState[activeLocoID][fslot]) + ">");
+//        Serial.println(functionCMD);
+//        client.print(functionCMD);
+//        if(!client.print(functionCMD)) Serial.println("Transmit Failed");
+      }
+    }else if(code == LV_EVENT_RELEASED)
+    {
+      if(lv_obj_get_state(objects.desc_button) == LV_STATE_CHECKED)
+      {
+        Serial.printf("Function Released: %d\n", fNum);
+        lv_label_set_text(objects.func_description, "");
+        lv_btnmatrix_clear_btn_ctrl(obj, fNum, LV_BTNMATRIX_CTRL_CHECKED);
+ //       if(funcOption[activeLocoID][fslot] == 1)
+ //       {
+ //         lv_btnmatrix_clear_btn_ctrl(obj, func_xlate[fslot], LV_BTNMATRIX_CTRL_CHECKED);
+ //         funcState[activeLocoID][fslot] = 0;
+ //         //Send the DCCEX Command...
+ //         String functionCMD = ("<F " + String(locoAddress[activeLocoID]) + " " + String(atoi(funcNumber[activeLocoID][fslot])) + " " + String(funcState[activeLocoID][fslot]) + ">");
+ //         Serial.println(functionCMD);
+ //         if(!client.print(functionCMD)) Serial.println("Transmit Failed");
+ //          client.print(functionCMD);
+ //       }
+      }
+    }
+  }
+}
+

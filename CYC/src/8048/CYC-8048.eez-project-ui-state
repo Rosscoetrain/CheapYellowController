@@ -1,7 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/0",
-    "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/11",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -191,18 +190,17 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 53.8599487617421,
-              "selected": 1,
+              "weight": 50.62140804597701,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "Main",
+                  "name": "EditAcc",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/0",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/11",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -225,7 +223,7 @@
             {
               "type": "row",
               "id": "#bbefd545-d8ba-41a4-9d01-081cee3d2312",
-              "weight": 31.1400512382579,
+              "weight": 34.37859195402299,
               "children": [
                 {
                   "type": "tabset",
@@ -1555,6 +1553,164 @@
         "secondToPx": 200,
         "scrollLeft": 0
       }
+    },
+    "[CYC-8048.eez-project]:/userPages/10[flow-state]": {
+      "selection": {
+        "0": {
+          "1": {},
+          "2": {},
+          "3": {
+            "$selected": true
+          },
+          "4": {
+            "$selected": true
+          },
+          "5": {
+            "$selected": true
+          },
+          "6": {
+            "$selected": true
+          },
+          "7": {
+            "$selected": true
+          },
+          "8": {
+            "$selected": true
+          },
+          "9": {
+            "$selected": true
+          },
+          "10": {
+            "$selected": true
+          },
+          "11": {
+            "$selected": true
+          },
+          "12": {
+            "$selected": true
+          },
+          "13": {
+            "$selected": true
+          },
+          "14": {
+            "$selected": true
+          },
+          "15": {
+            "$selected": true
+          },
+          "16": {
+            "$selected": true
+          },
+          "17": {
+            "$selected": true
+          },
+          "18": {
+            "$selected": true
+          },
+          "19": {
+            "$selected": true
+          },
+          "20": {
+            "$selected": true
+          },
+          "21": {
+            "$selected": true
+          },
+          "22": {
+            "$selected": true
+          },
+          "23": {
+            "$selected": true
+          },
+          "24": {
+            "$selected": true
+          },
+          "25": {
+            "$selected": true
+          },
+          "26": {
+            "$selected": true
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -156,
+          "y": -321.7013888888889
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048.eez-project]:/userPages/11[flow-state]": {
+      "selection": {
+        "0": {
+          "3": {
+            "$selected": true
+          },
+          "4": {
+            "$selected": true
+          },
+          "5": {
+            "$selected": true
+          },
+          "6": {
+            "$selected": true
+          },
+          "7": {
+            "$selected": true
+          },
+          "8": {
+            "$selected": true
+          },
+          "9": {
+            "$selected": true
+          },
+          "10": {
+            "$selected": true
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -187.8,
+          "y": -330.8388888888889
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048.eez-project]:/userPages/12[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -119,
+          "y": -344
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
     }
   },
   "activeOutputSection": 0,
@@ -1571,9 +1727,9 @@
   "lvglPart": "MAIN",
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
-    "TEXT",
     "IMAGE",
-    "BACKGROUND"
+    "BACKGROUND",
+    "TEXT"
   ],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,
