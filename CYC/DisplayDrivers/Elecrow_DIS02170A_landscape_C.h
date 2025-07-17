@@ -41,10 +41,6 @@ TCA9534 ioex;
 #define RGB_PANEL
 */
 
-#define I2C_SDA 15
-#define I2C_SCL 16
-
-
 
 class LGFX : public lgfx::LGFX_Device {
 public:

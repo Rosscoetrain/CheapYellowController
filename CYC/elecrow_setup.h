@@ -106,7 +106,6 @@ void init_LittleFS()
   pinMode(19, OUTPUT);//uart1
 
   Wire.begin(I2C_SDA, I2C_SCL);
-//  Wire.begin(15, 16);
   delay(100);
 
 // Init additional display hardware.
