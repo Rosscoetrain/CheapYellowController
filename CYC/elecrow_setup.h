@@ -105,7 +105,8 @@ void init_LittleFS()
 
   pinMode(19, OUTPUT);//uart1
 
-  Wire.begin(15, 16);
+  Wire.begin(I2C_SDA, I2C_SCL);
+//  Wire.begin(15, 16);
   delay(100);
 
 // Init additional display hardware.
@@ -132,7 +133,7 @@ void init_LittleFS()
   gfx.fillScreen(TFT_BLACK);
 
 //  gfx.fillScreen(TFT_BLUE);
-  delay(1000);
+//  delay(1000);
 
 //  gfx.setTextColor(TFT_WHITE, TFT_BLUE);
 //  gfx.setTextSize(4);
@@ -180,6 +181,8 @@ void init_LittleFS()
   init_LittleFS();
 
   setBacklight(255);
+
+  beep(1000);
 
   Serial.println( "Setup done" );
 }

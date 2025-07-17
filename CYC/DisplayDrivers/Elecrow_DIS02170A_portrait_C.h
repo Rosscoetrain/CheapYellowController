@@ -45,6 +45,8 @@ TCA9534 ioex;
 #define RGB_PANEL
 */
 
+//#define I2C_SDA 15
+//#define I2C_SCL 16
 
 class LGFX : public lgfx::LGFX_Device {
 public:
@@ -185,6 +187,10 @@ void init_Hardware()
     Wire.beginTransmission(0x30);
     Wire.write(0x10);          // maximum brightness
     Wire.endTransmission();
+    Serial.println("Beep???");
+    Wire.beginTransmission(0x30);
+    Wire.write(0x18);          // beep???
+    Wire.endTransmission();
   }
   else
   {
@@ -204,6 +210,19 @@ void init_Hardware()
   }
 
  }
+
+
+void beep(uint16_t duration)
+ {
+  Wire.beginTransmission(0x30);
+  Wire.write(0x15);
+  Wire.endTransmission();
+  delay(duration);
+  Wire.beginTransmission(0x30);
+  Wire.write(0x16);
+  Wire.endTransmission();
+ }
+
 
 /*
  //create a touch object

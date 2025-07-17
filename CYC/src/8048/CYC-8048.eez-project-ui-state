@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/2",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/7",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -72,7 +72,7 @@
           {
             "type": "border",
             "selected": 0,
-            "size": 204.5,
+            "size": 54.5,
             "location": "bottom",
             "children": [
               {
@@ -190,17 +190,17 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 50.62140804597701,
+              "weight": 68.32974137931035,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "Roster",
+                  "name": "Config",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/2",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/7",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -223,7 +223,7 @@
             {
               "type": "row",
               "id": "#bbefd545-d8ba-41a4-9d01-081cee3d2312",
-              "weight": 34.37859195402299,
+              "weight": 16.670258620689655,
               "children": [
                 {
                   "type": "tabset",
@@ -1402,13 +1402,12 @@
         "0": {
           "2": {},
           "8": {}
-        },
-        "$selected": true
+        }
       },
       "transform": {
         "translate": {
-          "x": -240,
-          "y": -400
+          "x": -136,
+          "y": -299
         },
         "scale": 0.8
       },

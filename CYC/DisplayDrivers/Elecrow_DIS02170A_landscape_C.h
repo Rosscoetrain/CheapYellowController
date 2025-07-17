@@ -41,6 +41,10 @@ TCA9534 ioex;
 #define RGB_PANEL
 */
 
+#define I2C_SDA 15
+#define I2C_SCL 16
+
+
 
 class LGFX : public lgfx::LGFX_Device {
 public:
@@ -201,6 +205,39 @@ void init_Hardware()
   }
 
  }
+
+void beep(uint16_t duration)
+ {
+  Wire.beginTransmission(0x30);
+  Wire.write(0x15);
+  error = Wire.endTransmission();
+  delay(duration);
+  Wire.beginTransmission(0x30);
+  Wire.write(0x16);
+  error = Wire.endTransmission();
+ }
+
+
+/*
+ //create a touch object
+void my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data)
+{
+  if (ts.pressed()) 
+  {
+    data->state = LV_INDEV_STATE_PR;
+//    data->point.x = ts.X(); //map(p.x, touch_map_x1, touch_map_x2, 1, SCREEN_WIDTH);
+//    data->point.y = ts.Y(); //map(p.y, touch_map_y1, touch_map_y2, 1, SCREEN_HEIGHT);
+
+    data->point.x = map(ts.RawY(), touch_map_x1, touch_map_x2, 1, SCREEN_WIDTH);
+    data->point.y = map(ts.RawX(), touch_map_y1, touch_map_y2, 1, SCREEN_HEIGHT);
+ //   Serial.printf("RawX: %d X: %d - RawY: %d Y: %d\n", ts.RawX(), data->point.x, ts.RawY(), data->point.y );
+  }
+  else
+  {
+    data->state = LV_INDEV_STATE_REL;
+  }
+}
+*/
 
  #endif // ESP32_DIS02170A_LANDSCAPE_C_H
  
