@@ -181,7 +181,9 @@ void init_LittleFS()
 
   setBacklight(255);
 
+#if defined ESP32DIS02170A || defined ESP32DIS02170A_LS
   beep(1000);
+#endif
 
   Serial.println( "Setup done" );
 }
