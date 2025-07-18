@@ -44,6 +44,9 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 //    Serial.println(touch_x);
 //    Serial.print("y = ");
 //    Serial.println(touch_y);
+#if defined ESP32DIS02170A || defined ESP32DIS02170A_LS
+    beep(250);
+#endif
   }
 }
 
@@ -130,15 +133,6 @@ void init_LittleFS()
 
   gfx.startWrite();
   gfx.fillScreen(TFT_BLACK);
-
-//  gfx.fillScreen(TFT_BLUE);
-//  delay(1000);
-
-//  gfx.setTextColor(TFT_WHITE, TFT_BLUE);
-//  gfx.setTextSize(4);
-//  gfx.drawString("Wifi Throttle", 80, 200);
-//  delay(1000);
-  
 
   lv_init();
   // size_t buffer_size = sizeof(lv_color_t) * LCD_H_RES * LCD_V_RES;

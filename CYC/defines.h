@@ -9,7 +9,7 @@
 
 
 /*
- *  uncomment the resolution below for the display panel in use
+ *  uncomment the resolution below for the display panel in use when compiling in Arduino IDE
  */
 
 #ifndef PLATFORMIO_BUILD

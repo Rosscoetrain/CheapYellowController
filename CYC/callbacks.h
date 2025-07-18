@@ -26,6 +26,11 @@ static void ta_event_cb(lv_event_t * e)
   }
 }
 
+/*
+ *
+ * These set up the functions used by the EEZ Studio graphics.
+ * 
+ */
 
 void init_callbacks()
  {
@@ -84,3 +89,4 @@ void init_callbacks()
 
 
 #endif // CALLBACKS_H
+

@@ -16,6 +16,7 @@
 #include <driver/i2c.h>
 
 #include <Wire.h>
+//#include <Time.h>
 
 /* Expand IO */
 #include <TCA9534.h>
@@ -210,10 +211,18 @@ void init_Hardware()
 
 void beep(uint16_t duration)
  {
+  uint32_t then = millis() + duration;
+
   Wire.beginTransmission(0x30);
   Wire.write(0x15);
   Wire.endTransmission();
-  delay(duration);
+//  delay(duration);
+
+  while ( millis() < then )
+   {
+
+   }
+
   Wire.beginTransmission(0x30);
   Wire.write(0x16);
   Wire.endTransmission();
