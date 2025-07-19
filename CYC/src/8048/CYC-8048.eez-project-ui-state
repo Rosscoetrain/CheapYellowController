@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/7",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/5",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -197,25 +197,13 @@
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "Config",
+                  "name": "WiFi",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/7",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/5",
                     "permanent": false
                   },
                   "icon": "svg:page"
-                },
-                {
-                  "type": "tab",
-                  "id": "#ea342305-9a75-4f08-a34f-26474f3011af",
-                  "name": "Settings",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/settings",
-                    "subObjectPath": "[CYC-8048.eez-project]:/settings",
-                    "permanent": false
-                  },
-                  "icon": "material:settings"
                 }
               ],
               "active": true
@@ -1357,12 +1345,14 @@
     "[CYC-8048.eez-project]:/userPages/5[flow-state]": {
       "selection": {
         "0": {
+          "0": {
+            "$selected": true
+          },
           "3": {},
           "9": {},
           "14": {},
           "16": {}
-        },
-        "$selected": true
+        }
       },
       "transform": {
         "translate": {
@@ -1380,8 +1370,11 @@
     },
     "[CYC-8048.eez-project]:/userPages/6[flow-state]": {
       "selection": {
-        "0": {},
-        "$selected": true
+        "0": {
+          "3": {
+            "$selected": true
+          }
+        }
       },
       "transform": {
         "translate": {
@@ -1400,7 +1393,9 @@
     "[CYC-8048.eez-project]:/userPages/7[flow-state]": {
       "selection": {
         "0": {
-          "2": {},
+          "2": {
+            "$selected": true
+          },
           "8": {}
         }
       },
@@ -1725,8 +1720,6 @@
   "lvglPart": "MAIN",
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
-    "IMAGE",
-    "BACKGROUND",
     "TEXT"
   ],
   "showInactiveFlowsInDebugger": true,

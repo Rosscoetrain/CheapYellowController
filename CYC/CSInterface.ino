@@ -57,7 +57,7 @@ void parse(char *com)
           {
             Serial.printf("Bad Message: %s\n", token);
             lv_label_set_text(objects.lbl_ps2, "Read Unsuccessful");
-            token = "";
+            token[0] = '\0'; //"";
             lv_obj_clear_state(objects.btn_read, LV_STATE_CHECKED);
             break;
           }
