@@ -22,6 +22,9 @@ typedef struct _objects_t {
     lv_obj_t *config;
     lv_obj_t *credits;
     lv_obj_t *info;
+    lv_obj_t *accessories;
+    lv_obj_t *edit_acc;
+    lv_obj_t *functions;
     lv_obj_t *btn_stop;
     lv_obj_t *btn_power;
     lv_obj_t *sw_dir;
@@ -192,6 +195,30 @@ typedef struct _objects_t {
     lv_obj_t *info_button_10;
     lv_obj_t *obj55;
     lv_obj_t *obj56;
+    lv_obj_t *info_button_6;
+    lv_obj_t *obj57;
+    lv_obj_t *credits_button_6;
+    lv_obj_t *obj58;
+    lv_obj_t *obj59;
+    lv_obj_t *acc0;
+    lv_obj_t *acc0_1;
+    lv_obj_t *acc0_2;
+    lv_obj_t *acc0_3;
+    lv_obj_t *acc0_4;
+    lv_obj_t *acc0_5;
+    lv_obj_t *info_button_7;
+    lv_obj_t *obj60;
+    lv_obj_t *credits_button_7;
+    lv_obj_t *obj61;
+    lv_obj_t *obj62;
+    lv_obj_t *cancel_button_9;
+    lv_obj_t *obj63;
+    lv_obj_t *done_button_19;
+    lv_obj_t *obj64;
+    lv_obj_t *desc_button;
+    lv_obj_t *obj65;
+    lv_obj_t *func_description;
+    lv_obj_t *ex_functions_mtx;
 } objects_t;
 
 extern objects_t objects;
@@ -207,6 +234,9 @@ enum ScreensEnum {
     SCREEN_ID_CONFIG = 8,
     SCREEN_ID_CREDITS = 9,
     SCREEN_ID_INFO = 10,
+    SCREEN_ID_ACCESSORIES = 11,
+    SCREEN_ID_EDIT_ACC = 12,
+    SCREEN_ID_FUNCTIONS = 13,
 };
 
 void create_screen_main();
@@ -238,6 +268,15 @@ void tick_screen_credits();
 
 void create_screen_info();
 void tick_screen_info();
+
+void create_screen_accessories();
+void tick_screen_accessories();
+
+void create_screen_edit_acc();
+void tick_screen_edit_acc();
+
+void create_screen_functions();
+void tick_screen_functions();
 
 void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);

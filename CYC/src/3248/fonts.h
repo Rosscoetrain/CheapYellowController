@@ -19,4 +19,4 @@ extern "C" {
 
 #endif /*EEZ_LVGL_UI_FONTS_H*/
 
-#endif // RES3248
+#endif  // RES3248

@@ -1,6 +1,7 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/5",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/12",
+    "selectedActionObject": "[CYC-8048.eez-project]:/actions/23",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -119,7 +120,7 @@
             {
               "type": "row",
               "id": "#292fc551-6db1-4978-8868-ca8f753fe0b5",
-              "weight": 15,
+              "weight": 28.774419493882093,
               "children": [
                 {
                   "type": "tabset",
@@ -151,7 +152,8 @@
                       "enableClose": false,
                       "icon": "material:code"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -190,28 +192,27 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 68.32974137931035,
+              "weight": 48.01312716793197,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "WiFi",
+                  "name": "Functions",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/5",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/12",
                     "permanent": false
                   },
                   "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
               "id": "#bbefd545-d8ba-41a4-9d01-081cee3d2312",
-              "weight": 16.670258620689655,
+              "weight": 23.212453338185938,
               "children": [
                 {
                   "type": "tabset",
@@ -1345,7 +1346,8 @@
     "[CYC-8048.eez-project]:/userPages/5[flow-state]": {
       "selection": {
         "0": {
-          "0": {
+          "0": {},
+          "1": {
             "$selected": true
           },
           "3": {},
@@ -1371,7 +1373,8 @@
     "[CYC-8048.eez-project]:/userPages/6[flow-state]": {
       "selection": {
         "0": {
-          "3": {
+          "3": {},
+          "4": {
             "$selected": true
           }
         }
@@ -1463,7 +1466,9 @@
     "[CYC-8048.eez-project]:/userPages/1[flow-state]": {
       "selection": {
         "0": {
-          "2": {},
+          "6": {
+            "$selected": true
+          },
           "8": {},
           "21": {}
         }
@@ -1686,9 +1691,9 @@
     "[CYC-8048.eez-project]:/userPages/12[flow-state]": {
       "selection": {
         "0": {
-          "0": {},
-          "1": {},
-          "2": {}
+          "2": {
+            "$selected": true
+          }
         }
       },
       "transform": {

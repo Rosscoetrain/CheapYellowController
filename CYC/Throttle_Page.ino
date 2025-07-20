@@ -312,7 +312,7 @@ static void ex_functions_cb(lv_event_t * e)
 //    Serial.printf("Button: %d\n", fNum);
     if(lv_btnmatrix_has_btn_ctrl(obj, fNum, LV_BTNMATRIX_CTRL_DISABLED)) return;
     if(code == LV_EVENT_PRESSED)
-    {
+     {
       if(lv_obj_get_state(objects.desc_button) == LV_STATE_CHECKED)
       {
         Serial.printf("Function Pressed: %d\n", fNum);
@@ -333,10 +333,11 @@ static void ex_functions_cb(lv_event_t * e)
 //        client.print(functionCMD);
 //        if(!client.print(functionCMD)) Serial.println("Transmit Failed");
       }
-    }else if(code == LV_EVENT_RELEASED)
-    {
+     }
+    else if(code == LV_EVENT_RELEASED)
+     {
       if(lv_obj_get_state(objects.desc_button) == LV_STATE_CHECKED)
-      {
+       {
         Serial.printf("Function Released: %d\n", fNum);
         lv_label_set_text(objects.func_description, "");
         lv_btnmatrix_clear_btn_ctrl(obj, fNum, LV_BTNMATRIX_CTRL_CHECKED);
@@ -350,8 +351,8 @@ static void ex_functions_cb(lv_event_t * e)
  //         if(!client.print(functionCMD)) Serial.println("Transmit Failed");
  //          client.print(functionCMD);
  //       }
-      }
-    }
+       }
+     }
   }
 }
 

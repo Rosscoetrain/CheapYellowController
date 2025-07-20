@@ -121,6 +121,12 @@ WiFiClient client;
 //  #include "DisplayDrivers/ESP32_8048S070C.h"
 //#elif defined ESP4848S040C     //TODO
 //  #include "DisplayDrivers/ESP32_4848S040C.h"
+#elif defined ESP32DIS05035H
+  #include "src/3248/ui.h"
+  #include "src/3248/screens.h"
+  #include "src/3248/actions.h"
+  #include "src/3248/images.h"
+  #include "DisplayDrivers/ESP32_DIS05035H.h"
 #elif defined ESP32DIS06043H
   #include "src/4827/ui.h"
   #include "src/4827/screens.h"
